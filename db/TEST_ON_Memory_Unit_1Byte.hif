@@ -1,0 +1,157 @@
+Version 4.2 Build 178 01/19/2005 Service Pack 1 SJ Full Version
+32
+1579
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+VRSM_ON
+VHSM_ON
+RETIME_OFF
+REMAP_OFF
+0
+-- Start Partition --
+|
+ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP
+Off
+ADV_NETLIST_OPT_SYNTH_GATE_RETIME
+Off
+STATE_MACHINE_PROCESSING
+Auto
+STRATIXII_OPTIMIZATION_TECHNIQUE
+Balanced
+CYCLONE_OPTIMIZATION_TECHNIQUE
+Balanced
+CYCLONEII_OPTIMIZATION_TECHNIQUE
+Balanced
+STRATIX_OPTIMIZATION_TECHNIQUE
+Balanced
+MAXII_OPTIMIZATION_TECHNIQUE
+Balanced
+----
+-- End Partition --
+# entity
+Memory_Unit_1Bit
+# case_insensitive
+# source_file
+Memory_Unit_1Bit.bdf
+1397224364
+23
+# storage
+db|TEST_ON_Memory_Unit_1Byte.(2).cnf
+db|TEST_ON_Memory_Unit_1Byte.(2).cnf
+# end
+# entity
+74138
+# case_insensitive
+# source_file
+c:|altera|quartus42|libraries|others|maxplus2|74138.bdf
+1094865614
+23
+# storage
+db|TEST_ON_Memory_Unit_1Byte.(3).cnf
+db|TEST_ON_Memory_Unit_1Byte.(3).cnf
+# end
+# entity
+Memory_Unit_1Bit_dffe
+# case_insensitive
+# source_file
+Memory_Unit_1Bit_dffe.bdf
+1397631160
+23
+# storage
+db|TEST_ON_Memory_Unit_1Byte.(0).cnf
+db|TEST_ON_Memory_Unit_1Byte.(0).cnf
+# end
+# entity
+table_unit_4bit
+# case_insensitive
+# source_file
+table_unit_4bit.bdf
+1397631340
+23
+# storage
+db|TEST_ON_Memory_Unit_1Byte.(1).cnf
+db|TEST_ON_Memory_Unit_1Byte.(1).cnf
+# end
+# entity
+counter_quanternary
+# case_insensitive
+# source_file
+counter_quanternary.bdf
+1397216628
+23
+# storage
+db|TEST_ON_Memory_Unit_1Byte.(5).cnf
+db|TEST_ON_Memory_Unit_1Byte.(5).cnf
+# end
+# entity
+address_combiner
+# case_insensitive
+# source_file
+address_combiner.bdf
+1397218290
+23
+# storage
+db|TEST_ON_Memory_Unit_1Byte.(6).cnf
+db|TEST_ON_Memory_Unit_1Byte.(6).cnf
+# end
+# entity
+Memory_Unit_1Byte
+# case_insensitive
+# source_file
+Memory_Unit_1Byte.bdf
+1397224070
+23
+# storage
+db|TEST_ON_Memory_Unit_1Byte.(10).cnf
+db|TEST_ON_Memory_Unit_1Byte.(10).cnf
+# end
+# entity
+table_unit_32bit
+# case_insensitive
+# source_file
+table_unit_32bit.bdf
+1397634040
+23
+# storage
+db|TEST_ON_Memory_Unit_1Byte.(7).cnf
+db|TEST_ON_Memory_Unit_1Byte.(7).cnf
+# end
+# entity
+memory_unit_1block
+# case_insensitive
+# source_file
+memory_unit_1block.bdf
+1397636230
+23
+# storage
+db|TEST_ON_Memory_Unit_1Byte.(8).cnf
+db|TEST_ON_Memory_Unit_1Byte.(8).cnf
+# end
+# entity
+memory_unit_8blocks
+# case_insensitive
+# source_file
+memory_unit_8blocks.bdf
+1397635084
+23
+# storage
+db|TEST_ON_Memory_Unit_1Byte.(9).cnf
+db|TEST_ON_Memory_Unit_1Byte.(9).cnf
+# end
+# entity
+the_cache
+# case_insensitive
+# source_file
+the_cache.bdf
+1397638674
+23
+# storage
+db|TEST_ON_Memory_Unit_1Byte.(4).cnf
+db|TEST_ON_Memory_Unit_1Byte.(4).cnf
+# end
+# complete
+

@@ -1,0 +1,69 @@
+Version 4.2 Build 178 01/19/2005 Service Pack 1 SJ Full Version
+32
+1579
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+VRSM_ON
+VHSM_ON
+RETIME_OFF
+REMAP_OFF
+0
+-- Start Partition --
+|
+ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP
+Off
+ADV_NETLIST_OPT_SYNTH_GATE_RETIME
+Off
+STATE_MACHINE_PROCESSING
+Auto
+STRATIXII_OPTIMIZATION_TECHNIQUE
+Balanced
+CYCLONE_OPTIMIZATION_TECHNIQUE
+Balanced
+CYCLONEII_OPTIMIZATION_TECHNIQUE
+Balanced
+STRATIX_OPTIMIZATION_TECHNIQUE
+Balanced
+MAXII_OPTIMIZATION_TECHNIQUE
+Balanced
+----
+-- End Partition --
+# entity
+memory_unit_1byte
+# case_insensitive
+# source_file
+..|memory_unit_1byte.bdf
+1397029056
+23
+# storage
+db|Memory_Unit_1Block.(1).cnf
+db|Memory_Unit_1Block.(1).cnf
+# end
+# entity
+memory_unit_1bit
+# case_insensitive
+# source_file
+..|memory_unit_1bit.bdf
+1397028866
+23
+# storage
+db|Memory_Unit_1Block.(2).cnf
+db|Memory_Unit_1Block.(2).cnf
+# end
+# entity
+memory_unit_1block
+# case_insensitive
+# source_file
+..|memory_unit_1block.bdf
+1397032408
+23
+# storage
+db|Memory_Unit_1Block.(0).cnf
+db|Memory_Unit_1Block.(0).cnf
+# end
+# complete
+

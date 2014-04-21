@@ -1,0 +1,506 @@
+--A1L91 is DATA_OUT~802
+--operation mode is normal
+
+A1L91 = C1_inst # W[0] # W[1] # !RD;
+
+
+--inst19 is inst19
+--operation mode is normal
+
+inst19 = RD & W[0] & W[1];
+
+
+--inst17 is inst17
+--operation mode is normal
+
+inst17 = RD & W[0] & !W[1];
+
+
+--A1L02 is DATA_OUT~803
+--operation mode is normal
+
+A1L02 = C9_inst & C52_inst # !inst19 # !C9_inst & !inst17 & C52_inst # !inst19;
+
+
+--inst18 is inst18
+--operation mode is normal
+
+inst18 = RD & W[1] & !W[0];
+
+
+--A1L12 is DATA_OUT~804
+--operation mode is normal
+
+A1L12 = A1L91 & A1L02 & C71_inst # !inst18;
+
+
+--A1L22 is DATA_OUT~805
+--operation mode is normal
+
+A1L22 = W[0] # W[1] # C2_inst # !RD;
+
+
+--A1L32 is DATA_OUT~806
+--operation mode is normal
+
+A1L32 = C62_inst & C01_inst # !inst17 # !C62_inst & !inst19 & C01_inst # !inst17;
+
+
+--A1L42 is DATA_OUT~807
+--operation mode is normal
+
+A1L42 = A1L22 & A1L32 & C81_inst # !inst18;
+
+
+--A1L52 is DATA_OUT~808
+--operation mode is normal
+
+A1L52 = W[0] # W[1] # C3_inst # !RD;
+
+
+--A1L62 is DATA_OUT~809
+--operation mode is normal
+
+A1L62 = C72_inst & C11_inst # !inst17 # !C72_inst & !inst19 & C11_inst # !inst17;
+
+
+--A1L72 is DATA_OUT~810
+--operation mode is normal
+
+A1L72 = A1L52 & A1L62 & C91_inst # !inst18;
+
+
+--A1L82 is DATA_OUT~811
+--operation mode is normal
+
+A1L82 = W[0] # W[1] # C4_inst # !RD;
+
+
+--A1L92 is DATA_OUT~812
+--operation mode is normal
+
+A1L92 = C82_inst & C21_inst # !inst17 # !C82_inst & !inst19 & C21_inst # !inst17;
+
+
+--A1L03 is DATA_OUT~813
+--operation mode is normal
+
+A1L03 = A1L82 & A1L92 & C02_inst # !inst18;
+
+
+--A1L13 is DATA_OUT~814
+--operation mode is normal
+
+A1L13 = W[0] # W[1] # C5_inst # !RD;
+
+
+--A1L23 is DATA_OUT~815
+--operation mode is normal
+
+A1L23 = C92_inst & C31_inst # !inst17 # !C92_inst & !inst19 & C31_inst # !inst17;
+
+
+--A1L33 is DATA_OUT~816
+--operation mode is normal
+
+A1L33 = A1L13 & A1L23 & C12_inst # !inst18;
+
+
+--A1L43 is DATA_OUT~817
+--operation mode is normal
+
+A1L43 = W[0] # W[1] # C6_inst # !RD;
+
+
+--A1L53 is DATA_OUT~818
+--operation mode is normal
+
+A1L53 = C03_inst & C41_inst # !inst17 # !C03_inst & !inst19 & C41_inst # !inst17;
+
+
+--A1L63 is DATA_OUT~819
+--operation mode is normal
+
+A1L63 = A1L43 & A1L53 & C22_inst # !inst18;
+
+
+--A1L73 is DATA_OUT~820
+--operation mode is normal
+
+A1L73 = W[0] # W[1] # C7_inst # !RD;
+
+
+--A1L83 is DATA_OUT~821
+--operation mode is normal
+
+A1L83 = C13_inst & C51_inst # !inst17 # !C13_inst & !inst19 & C51_inst # !inst17;
+
+
+--A1L93 is DATA_OUT~822
+--operation mode is normal
+
+A1L93 = A1L73 & A1L83 & C32_inst # !inst18;
+
+
+--A1L04 is DATA_OUT~823
+--operation mode is normal
+
+A1L04 = W[0] # W[1] # C8_inst # !RD;
+
+
+--A1L14 is DATA_OUT~824
+--operation mode is normal
+
+A1L14 = C23_inst & C61_inst # !inst17 # !C23_inst & !inst19 & C61_inst # !inst17;
+
+
+--A1L24 is DATA_OUT~825
+--operation mode is normal
+
+A1L24 = A1L04 & A1L14 & C42_inst # !inst18;
+
+
+--inst11 is inst11
+--operation mode is normal
+
+inst11 = W[0] # W[1];
+
+
+--C1_inst is memory_unit_1byte:inst|memory_unit_1bit:inst|inst
+--operation mode is normal
+
+C1_inst = WR & inst11 & C1_inst # !inst11 & DATA_IN[0] # !WR & C1_inst;
+
+
+--A1L34 is inst10~2
+--operation mode is normal
+
+A1L34 = W[0] & !W[1];
+
+
+--C9_inst is memory_unit_1byte:inst1|memory_unit_1bit:inst|inst
+--operation mode is normal
+
+C9_inst = WR & A1L34 & DATA_IN[0] # !A1L34 & C9_inst # !WR & C9_inst;
+
+
+--A1L54 is inst10~4
+--operation mode is normal
+
+A1L54 = W[0] & W[1];
+
+
+--C52_inst is memory_unit_1byte:inst3|memory_unit_1bit:inst|inst
+--operation mode is normal
+
+C52_inst = WR & A1L54 & DATA_IN[0] # !A1L54 & C52_inst # !WR & C52_inst;
+
+
+--A1L44 is inst10~3
+--operation mode is normal
+
+A1L44 = W[1] & !W[0];
+
+
+--C71_inst is memory_unit_1byte:inst2|memory_unit_1bit:inst|inst
+--operation mode is normal
+
+C71_inst = WR & A1L44 & DATA_IN[0] # !A1L44 & C71_inst # !WR & C71_inst;
+
+
+--C2_inst is memory_unit_1byte:inst|memory_unit_1bit:inst1|inst
+--operation mode is normal
+
+C2_inst = WR & inst11 & C2_inst # !inst11 & DATA_IN[1] # !WR & C2_inst;
+
+
+--C62_inst is memory_unit_1byte:inst3|memory_unit_1bit:inst1|inst
+--operation mode is normal
+
+C62_inst = WR & A1L54 & DATA_IN[1] # !A1L54 & C62_inst # !WR & C62_inst;
+
+
+--C01_inst is memory_unit_1byte:inst1|memory_unit_1bit:inst1|inst
+--operation mode is normal
+
+C01_inst = WR & A1L34 & DATA_IN[1] # !A1L34 & C01_inst # !WR & C01_inst;
+
+
+--C81_inst is memory_unit_1byte:inst2|memory_unit_1bit:inst1|inst
+--operation mode is normal
+
+C81_inst = WR & A1L44 & DATA_IN[1] # !A1L44 & C81_inst # !WR & C81_inst;
+
+
+--C3_inst is memory_unit_1byte:inst|memory_unit_1bit:inst2|inst
+--operation mode is normal
+
+C3_inst = WR & inst11 & C3_inst # !inst11 & DATA_IN[2] # !WR & C3_inst;
+
+
+--C72_inst is memory_unit_1byte:inst3|memory_unit_1bit:inst2|inst
+--operation mode is normal
+
+C72_inst = WR & A1L54 & DATA_IN[2] # !A1L54 & C72_inst # !WR & C72_inst;
+
+
+--C11_inst is memory_unit_1byte:inst1|memory_unit_1bit:inst2|inst
+--operation mode is normal
+
+C11_inst = WR & A1L34 & DATA_IN[2] # !A1L34 & C11_inst # !WR & C11_inst;
+
+
+--C91_inst is memory_unit_1byte:inst2|memory_unit_1bit:inst2|inst
+--operation mode is normal
+
+C91_inst = WR & A1L44 & DATA_IN[2] # !A1L44 & C91_inst # !WR & C91_inst;
+
+
+--C4_inst is memory_unit_1byte:inst|memory_unit_1bit:inst3|inst
+--operation mode is normal
+
+C4_inst = WR & inst11 & C4_inst # !inst11 & DATA_IN[3] # !WR & C4_inst;
+
+
+--C82_inst is memory_unit_1byte:inst3|memory_unit_1bit:inst3|inst
+--operation mode is normal
+
+C82_inst = WR & A1L54 & DATA_IN[3] # !A1L54 & C82_inst # !WR & C82_inst;
+
+
+--C21_inst is memory_unit_1byte:inst1|memory_unit_1bit:inst3|inst
+--operation mode is normal
+
+C21_inst = WR & A1L34 & DATA_IN[3] # !A1L34 & C21_inst # !WR & C21_inst;
+
+
+--C02_inst is memory_unit_1byte:inst2|memory_unit_1bit:inst3|inst
+--operation mode is normal
+
+C02_inst = WR & A1L44 & DATA_IN[3] # !A1L44 & C02_inst # !WR & C02_inst;
+
+
+--C5_inst is memory_unit_1byte:inst|memory_unit_1bit:inst4|inst
+--operation mode is normal
+
+C5_inst = WR & inst11 & C5_inst # !inst11 & DATA_IN[4] # !WR & C5_inst;
+
+
+--C92_inst is memory_unit_1byte:inst3|memory_unit_1bit:inst4|inst
+--operation mode is normal
+
+C92_inst = WR & A1L54 & DATA_IN[4] # !A1L54 & C92_inst # !WR & C92_inst;
+
+
+--C31_inst is memory_unit_1byte:inst1|memory_unit_1bit:inst4|inst
+--operation mode is normal
+
+C31_inst = WR & A1L34 & DATA_IN[4] # !A1L34 & C31_inst # !WR & C31_inst;
+
+
+--C12_inst is memory_unit_1byte:inst2|memory_unit_1bit:inst4|inst
+--operation mode is normal
+
+C12_inst = WR & A1L44 & DATA_IN[4] # !A1L44 & C12_inst # !WR & C12_inst;
+
+
+--C6_inst is memory_unit_1byte:inst|memory_unit_1bit:inst5|inst
+--operation mode is normal
+
+C6_inst = WR & inst11 & C6_inst # !inst11 & DATA_IN[5] # !WR & C6_inst;
+
+
+--C03_inst is memory_unit_1byte:inst3|memory_unit_1bit:inst5|inst
+--operation mode is normal
+
+C03_inst = WR & A1L54 & DATA_IN[5] # !A1L54 & C03_inst # !WR & C03_inst;
+
+
+--C41_inst is memory_unit_1byte:inst1|memory_unit_1bit:inst5|inst
+--operation mode is normal
+
+C41_inst = WR & A1L34 & DATA_IN[5] # !A1L34 & C41_inst # !WR & C41_inst;
+
+
+--C22_inst is memory_unit_1byte:inst2|memory_unit_1bit:inst5|inst
+--operation mode is normal
+
+C22_inst = WR & A1L44 & DATA_IN[5] # !A1L44 & C22_inst # !WR & C22_inst;
+
+
+--C7_inst is memory_unit_1byte:inst|memory_unit_1bit:inst6|inst
+--operation mode is normal
+
+C7_inst = WR & inst11 & C7_inst # !inst11 & DATA_IN[6] # !WR & C7_inst;
+
+
+--C13_inst is memory_unit_1byte:inst3|memory_unit_1bit:inst6|inst
+--operation mode is normal
+
+C13_inst = WR & A1L54 & DATA_IN[6] # !A1L54 & C13_inst # !WR & C13_inst;
+
+
+--C51_inst is memory_unit_1byte:inst1|memory_unit_1bit:inst6|inst
+--operation mode is normal
+
+C51_inst = WR & A1L34 & DATA_IN[6] # !A1L34 & C51_inst # !WR & C51_inst;
+
+
+--C32_inst is memory_unit_1byte:inst2|memory_unit_1bit:inst6|inst
+--operation mode is normal
+
+C32_inst = WR & A1L44 & DATA_IN[6] # !A1L44 & C32_inst # !WR & C32_inst;
+
+
+--C8_inst is memory_unit_1byte:inst|memory_unit_1bit:inst7|inst
+--operation mode is normal
+
+C8_inst = WR & inst11 & C8_inst # !inst11 & DATA_IN[7] # !WR & C8_inst;
+
+
+--C23_inst is memory_unit_1byte:inst3|memory_unit_1bit:inst7|inst
+--operation mode is normal
+
+C23_inst = WR & A1L54 & DATA_IN[7] # !A1L54 & C23_inst # !WR & C23_inst;
+
+
+--C61_inst is memory_unit_1byte:inst1|memory_unit_1bit:inst7|inst
+--operation mode is normal
+
+C61_inst = WR & A1L34 & DATA_IN[7] # !A1L34 & C61_inst # !WR & C61_inst;
+
+
+--C42_inst is memory_unit_1byte:inst2|memory_unit_1bit:inst7|inst
+--operation mode is normal
+
+C42_inst = WR & A1L44 & DATA_IN[7] # !A1L44 & C42_inst # !WR & C42_inst;
+
+
+--W[0] is W[0]
+--operation mode is input
+
+W[0] = INPUT();
+
+
+--W[1] is W[1]
+--operation mode is input
+
+W[1] = INPUT();
+
+
+--RD is RD
+--operation mode is input
+
+RD = INPUT();
+
+
+--WR is WR
+--operation mode is input
+
+WR = INPUT();
+
+
+--DATA_IN[0] is DATA_IN[0]
+--operation mode is input
+
+DATA_IN[0] = INPUT();
+
+
+--DATA_IN[1] is DATA_IN[1]
+--operation mode is input
+
+DATA_IN[1] = INPUT();
+
+
+--DATA_IN[2] is DATA_IN[2]
+--operation mode is input
+
+DATA_IN[2] = INPUT();
+
+
+--DATA_IN[3] is DATA_IN[3]
+--operation mode is input
+
+DATA_IN[3] = INPUT();
+
+
+--DATA_IN[4] is DATA_IN[4]
+--operation mode is input
+
+DATA_IN[4] = INPUT();
+
+
+--DATA_IN[5] is DATA_IN[5]
+--operation mode is input
+
+DATA_IN[5] = INPUT();
+
+
+--DATA_IN[6] is DATA_IN[6]
+--operation mode is input
+
+DATA_IN[6] = INPUT();
+
+
+--DATA_IN[7] is DATA_IN[7]
+--operation mode is input
+
+DATA_IN[7] = INPUT();
+
+
+--DATA_OUT[0] is DATA_OUT[0]
+--operation mode is output
+
+DATA_OUT[0]_tri_out = TRI(A1L12, RD);
+DATA_OUT[0] = OUTPUT(DATA_OUT[0]_tri_out);
+
+
+--DATA_OUT[1] is DATA_OUT[1]
+--operation mode is output
+
+DATA_OUT[1]_tri_out = TRI(A1L42, RD);
+DATA_OUT[1] = OUTPUT(DATA_OUT[1]_tri_out);
+
+
+--DATA_OUT[2] is DATA_OUT[2]
+--operation mode is output
+
+DATA_OUT[2]_tri_out = TRI(A1L72, RD);
+DATA_OUT[2] = OUTPUT(DATA_OUT[2]_tri_out);
+
+
+--DATA_OUT[3] is DATA_OUT[3]
+--operation mode is output
+
+DATA_OUT[3]_tri_out = TRI(A1L03, RD);
+DATA_OUT[3] = OUTPUT(DATA_OUT[3]_tri_out);
+
+
+--DATA_OUT[4] is DATA_OUT[4]
+--operation mode is output
+
+DATA_OUT[4]_tri_out = TRI(A1L33, RD);
+DATA_OUT[4] = OUTPUT(DATA_OUT[4]_tri_out);
+
+
+--DATA_OUT[5] is DATA_OUT[5]
+--operation mode is output
+
+DATA_OUT[5]_tri_out = TRI(A1L63, RD);
+DATA_OUT[5] = OUTPUT(DATA_OUT[5]_tri_out);
+
+
+--DATA_OUT[6] is DATA_OUT[6]
+--operation mode is output
+
+DATA_OUT[6]_tri_out = TRI(A1L93, RD);
+DATA_OUT[6] = OUTPUT(DATA_OUT[6]_tri_out);
+
+
+--DATA_OUT[7] is DATA_OUT[7]
+--operation mode is output
+
+DATA_OUT[7]_tri_out = TRI(A1L24, RD);
+DATA_OUT[7] = OUTPUT(DATA_OUT[7]_tri_out);
+
+

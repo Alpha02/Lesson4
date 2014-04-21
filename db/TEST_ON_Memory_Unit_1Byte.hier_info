@@ -1,0 +1,4105 @@
+|the_cache
+MR <= table_unit_32bit:inst5.M
+T2 => inst21.IN0
+T2 => inst16.CLK
+T2 => inst20.IN2
+CLR => inst10.IN0
+CLR => inst12.IN1
+CLR => table_unit_32bit:inst5.CLR
+RD => inst13.IN0
+RD => inst19.IN0
+A[7] => table_unit_32bit:inst5.A[7]
+A[7] => MA[7].DATAIN
+A[6] => table_unit_32bit:inst5.A[6]
+A[6] => MA[6].DATAIN
+A[5] => table_unit_32bit:inst5.A[5]
+A[5] => MA[5].DATAIN
+A[4] => table_unit_32bit:inst5.A[4]
+A[4] => Address_Combiner:inst7.A[4]
+A[4] => MA[4].DATAIN
+A[3] => table_unit_32bit:inst5.A[3]
+A[3] => Address_Combiner:inst7.A[3]
+A[3] => MA[3].DATAIN
+A[2] => table_unit_32bit:inst5.A[2]
+A[2] => Address_Combiner:inst7.A[2]
+A[2] => MA[2].DATAIN
+A[1] => Address_Combiner:inst7.A[1]
+A[1] => MA[1].DATAIN
+A[0] => Address_Combiner:inst7.A[0]
+A[0] => MA[0].DATAIN
+TEST_OUT <= Counter_quanternary:inst6.WCT
+D[7] <= Memory_Unit_8Blocks:inst.Q[7]
+D[6] <= Memory_Unit_8Blocks:inst.Q[6]
+D[5] <= Memory_Unit_8Blocks:inst.Q[5]
+D[4] <= Memory_Unit_8Blocks:inst.Q[4]
+D[3] <= Memory_Unit_8Blocks:inst.Q[3]
+D[2] <= Memory_Unit_8Blocks:inst.Q[2]
+D[1] <= Memory_Unit_8Blocks:inst.Q[1]
+D[0] <= Memory_Unit_8Blocks:inst.Q[0]
+MD[7] => Memory_Unit_8Blocks:inst.D[7]
+MD[6] => Memory_Unit_8Blocks:inst.D[6]
+MD[5] => Memory_Unit_8Blocks:inst.D[5]
+MD[4] => Memory_Unit_8Blocks:inst.D[4]
+MD[3] => Memory_Unit_8Blocks:inst.D[3]
+MD[2] => Memory_Unit_8Blocks:inst.D[2]
+MD[1] => Memory_Unit_8Blocks:inst.D[1]
+MD[0] => Memory_Unit_8Blocks:inst.D[0]
+MA[7] <= A[7].DB_MAX_OUTPUT_PORT_TYPE
+MA[6] <= A[6].DB_MAX_OUTPUT_PORT_TYPE
+MA[5] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+MA[4] <= A[4].DB_MAX_OUTPUT_PORT_TYPE
+MA[3] <= A[3].DB_MAX_OUTPUT_PORT_TYPE
+MA[2] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+MA[1] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
+MA[0] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|the_cache|table_unit_32bit:inst5
+M <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+A[7] => Table_Unit_4Bit:inst2.DIN[2]
+A[7] => Table_Unit_4Bit:inst.DIN[2]
+A[7] => Table_Unit_4Bit:inst1.DIN[2]
+A[7] => Table_Unit_4Bit:inst3.DIN[2]
+A[7] => Table_Unit_4Bit:inst4.DIN[2]
+A[7] => Table_Unit_4Bit:inst5.DIN[2]
+A[7] => Table_Unit_4Bit:inst6.DIN[2]
+A[7] => Table_Unit_4Bit:inst7.DIN[2]
+A[7] => inst19.IN0
+A[6] => Table_Unit_4Bit:inst2.DIN[1]
+A[6] => Table_Unit_4Bit:inst.DIN[1]
+A[6] => Table_Unit_4Bit:inst1.DIN[1]
+A[6] => Table_Unit_4Bit:inst3.DIN[1]
+A[6] => Table_Unit_4Bit:inst4.DIN[1]
+A[6] => Table_Unit_4Bit:inst5.DIN[1]
+A[6] => Table_Unit_4Bit:inst6.DIN[1]
+A[6] => Table_Unit_4Bit:inst7.DIN[1]
+A[6] => inst18.IN0
+A[5] => inst17.IN0
+A[5] => Table_Unit_4Bit:inst2.DIN[0]
+A[5] => Table_Unit_4Bit:inst.DIN[0]
+A[5] => Table_Unit_4Bit:inst1.DIN[0]
+A[5] => Table_Unit_4Bit:inst3.DIN[0]
+A[5] => Table_Unit_4Bit:inst4.DIN[0]
+A[5] => Table_Unit_4Bit:inst5.DIN[0]
+A[5] => Table_Unit_4Bit:inst6.DIN[0]
+A[5] => Table_Unit_4Bit:inst7.DIN[0]
+A[4] => 74138:WR_DECODER.C
+A[4] => 74138:RD_DECODER.C
+A[3] => 74138:WR_DECODER.B
+A[3] => 74138:RD_DECODER.B
+A[2] => 74138:WR_DECODER.A
+A[2] => 74138:RD_DECODER.A
+WR => 74138:WR_DECODER.G2AN
+RD => 74138:RD_DECODER.G2AN
+CLR => Table_Unit_4Bit:inst2.CLR
+CLR => Table_Unit_4Bit:inst.CLR
+CLR => Table_Unit_4Bit:inst1.CLR
+CLR => Table_Unit_4Bit:inst3.CLR
+CLR => Table_Unit_4Bit:inst4.CLR
+CLR => Table_Unit_4Bit:inst5.CLR
+CLR => Table_Unit_4Bit:inst6.CLR
+CLR => Table_Unit_4Bit:inst7.CLR
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst2
+DOUT[3] <= Memory_Unit_1Bit_dffe:inst7.OUT
+DOUT[2] <= Memory_Unit_1Bit_dffe:inst6.OUT
+DOUT[1] <= Memory_Unit_1Bit_dffe:inst5.OUT
+DOUT[0] <= Memory_Unit_1Bit_dffe:inst4.OUT
+DIN[3] => Memory_Unit_1Bit_dffe:inst7.IN
+DIN[2] => Memory_Unit_1Bit_dffe:inst6.IN
+DIN[1] => Memory_Unit_1Bit_dffe:inst5.IN
+DIN[0] => Memory_Unit_1Bit_dffe:inst4.IN
+WR => Memory_Unit_1Bit_dffe:inst5.WR
+WR => Memory_Unit_1Bit_dffe:inst6.WR
+WR => Memory_Unit_1Bit_dffe:inst4.WR
+WR => Memory_Unit_1Bit_dffe:inst7.WR
+RD => Memory_Unit_1Bit_dffe:inst5.RD
+RD => Memory_Unit_1Bit_dffe:inst6.RD
+RD => Memory_Unit_1Bit_dffe:inst4.RD
+RD => Memory_Unit_1Bit_dffe:inst7.RD
+CLR => Memory_Unit_1Bit_dffe:inst5.CLR
+CLR => Memory_Unit_1Bit_dffe:inst6.CLR
+CLR => Memory_Unit_1Bit_dffe:inst4.CLR
+CLR => Memory_Unit_1Bit_dffe:inst7.CLR
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst2|Memory_Unit_1Bit_dffe:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst2|Memory_Unit_1Bit_dffe:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst2|Memory_Unit_1Bit_dffe:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst2|Memory_Unit_1Bit_dffe:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|74138:WR_DECODER
+Y7N <= 22.DB_MAX_OUTPUT_PORT_TYPE
+G1 => 8.IN0
+G2BN => 1.IN1
+G2AN => 1.IN2
+B => 10.IN0
+A => 9.IN0
+C => 11.IN0
+Y6N <= 21.DB_MAX_OUTPUT_PORT_TYPE
+Y5N <= 20.DB_MAX_OUTPUT_PORT_TYPE
+Y4N <= 19.DB_MAX_OUTPUT_PORT_TYPE
+Y3N <= 18.DB_MAX_OUTPUT_PORT_TYPE
+Y2N <= 17.DB_MAX_OUTPUT_PORT_TYPE
+Y1N <= 16.DB_MAX_OUTPUT_PORT_TYPE
+Y0N <= 15.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|the_cache|table_unit_32bit:inst5|74138:RD_DECODER
+Y7N <= 22.DB_MAX_OUTPUT_PORT_TYPE
+G1 => 8.IN0
+G2BN => 1.IN1
+G2AN => 1.IN2
+B => 10.IN0
+A => 9.IN0
+C => 11.IN0
+Y6N <= 21.DB_MAX_OUTPUT_PORT_TYPE
+Y5N <= 20.DB_MAX_OUTPUT_PORT_TYPE
+Y4N <= 19.DB_MAX_OUTPUT_PORT_TYPE
+Y3N <= 18.DB_MAX_OUTPUT_PORT_TYPE
+Y2N <= 17.DB_MAX_OUTPUT_PORT_TYPE
+Y1N <= 16.DB_MAX_OUTPUT_PORT_TYPE
+Y0N <= 15.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst
+DOUT[3] <= Memory_Unit_1Bit_dffe:inst7.OUT
+DOUT[2] <= Memory_Unit_1Bit_dffe:inst6.OUT
+DOUT[1] <= Memory_Unit_1Bit_dffe:inst5.OUT
+DOUT[0] <= Memory_Unit_1Bit_dffe:inst4.OUT
+DIN[3] => Memory_Unit_1Bit_dffe:inst7.IN
+DIN[2] => Memory_Unit_1Bit_dffe:inst6.IN
+DIN[1] => Memory_Unit_1Bit_dffe:inst5.IN
+DIN[0] => Memory_Unit_1Bit_dffe:inst4.IN
+WR => Memory_Unit_1Bit_dffe:inst5.WR
+WR => Memory_Unit_1Bit_dffe:inst6.WR
+WR => Memory_Unit_1Bit_dffe:inst4.WR
+WR => Memory_Unit_1Bit_dffe:inst7.WR
+RD => Memory_Unit_1Bit_dffe:inst5.RD
+RD => Memory_Unit_1Bit_dffe:inst6.RD
+RD => Memory_Unit_1Bit_dffe:inst4.RD
+RD => Memory_Unit_1Bit_dffe:inst7.RD
+CLR => Memory_Unit_1Bit_dffe:inst5.CLR
+CLR => Memory_Unit_1Bit_dffe:inst6.CLR
+CLR => Memory_Unit_1Bit_dffe:inst4.CLR
+CLR => Memory_Unit_1Bit_dffe:inst7.CLR
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst|Memory_Unit_1Bit_dffe:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst|Memory_Unit_1Bit_dffe:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst|Memory_Unit_1Bit_dffe:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst|Memory_Unit_1Bit_dffe:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst1
+DOUT[3] <= Memory_Unit_1Bit_dffe:inst7.OUT
+DOUT[2] <= Memory_Unit_1Bit_dffe:inst6.OUT
+DOUT[1] <= Memory_Unit_1Bit_dffe:inst5.OUT
+DOUT[0] <= Memory_Unit_1Bit_dffe:inst4.OUT
+DIN[3] => Memory_Unit_1Bit_dffe:inst7.IN
+DIN[2] => Memory_Unit_1Bit_dffe:inst6.IN
+DIN[1] => Memory_Unit_1Bit_dffe:inst5.IN
+DIN[0] => Memory_Unit_1Bit_dffe:inst4.IN
+WR => Memory_Unit_1Bit_dffe:inst5.WR
+WR => Memory_Unit_1Bit_dffe:inst6.WR
+WR => Memory_Unit_1Bit_dffe:inst4.WR
+WR => Memory_Unit_1Bit_dffe:inst7.WR
+RD => Memory_Unit_1Bit_dffe:inst5.RD
+RD => Memory_Unit_1Bit_dffe:inst6.RD
+RD => Memory_Unit_1Bit_dffe:inst4.RD
+RD => Memory_Unit_1Bit_dffe:inst7.RD
+CLR => Memory_Unit_1Bit_dffe:inst5.CLR
+CLR => Memory_Unit_1Bit_dffe:inst6.CLR
+CLR => Memory_Unit_1Bit_dffe:inst4.CLR
+CLR => Memory_Unit_1Bit_dffe:inst7.CLR
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst1|Memory_Unit_1Bit_dffe:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst1|Memory_Unit_1Bit_dffe:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst1|Memory_Unit_1Bit_dffe:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst1|Memory_Unit_1Bit_dffe:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst3
+DOUT[3] <= Memory_Unit_1Bit_dffe:inst7.OUT
+DOUT[2] <= Memory_Unit_1Bit_dffe:inst6.OUT
+DOUT[1] <= Memory_Unit_1Bit_dffe:inst5.OUT
+DOUT[0] <= Memory_Unit_1Bit_dffe:inst4.OUT
+DIN[3] => Memory_Unit_1Bit_dffe:inst7.IN
+DIN[2] => Memory_Unit_1Bit_dffe:inst6.IN
+DIN[1] => Memory_Unit_1Bit_dffe:inst5.IN
+DIN[0] => Memory_Unit_1Bit_dffe:inst4.IN
+WR => Memory_Unit_1Bit_dffe:inst5.WR
+WR => Memory_Unit_1Bit_dffe:inst6.WR
+WR => Memory_Unit_1Bit_dffe:inst4.WR
+WR => Memory_Unit_1Bit_dffe:inst7.WR
+RD => Memory_Unit_1Bit_dffe:inst5.RD
+RD => Memory_Unit_1Bit_dffe:inst6.RD
+RD => Memory_Unit_1Bit_dffe:inst4.RD
+RD => Memory_Unit_1Bit_dffe:inst7.RD
+CLR => Memory_Unit_1Bit_dffe:inst5.CLR
+CLR => Memory_Unit_1Bit_dffe:inst6.CLR
+CLR => Memory_Unit_1Bit_dffe:inst4.CLR
+CLR => Memory_Unit_1Bit_dffe:inst7.CLR
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst3|Memory_Unit_1Bit_dffe:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst3|Memory_Unit_1Bit_dffe:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst3|Memory_Unit_1Bit_dffe:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst3|Memory_Unit_1Bit_dffe:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst4
+DOUT[3] <= Memory_Unit_1Bit_dffe:inst7.OUT
+DOUT[2] <= Memory_Unit_1Bit_dffe:inst6.OUT
+DOUT[1] <= Memory_Unit_1Bit_dffe:inst5.OUT
+DOUT[0] <= Memory_Unit_1Bit_dffe:inst4.OUT
+DIN[3] => Memory_Unit_1Bit_dffe:inst7.IN
+DIN[2] => Memory_Unit_1Bit_dffe:inst6.IN
+DIN[1] => Memory_Unit_1Bit_dffe:inst5.IN
+DIN[0] => Memory_Unit_1Bit_dffe:inst4.IN
+WR => Memory_Unit_1Bit_dffe:inst5.WR
+WR => Memory_Unit_1Bit_dffe:inst6.WR
+WR => Memory_Unit_1Bit_dffe:inst4.WR
+WR => Memory_Unit_1Bit_dffe:inst7.WR
+RD => Memory_Unit_1Bit_dffe:inst5.RD
+RD => Memory_Unit_1Bit_dffe:inst6.RD
+RD => Memory_Unit_1Bit_dffe:inst4.RD
+RD => Memory_Unit_1Bit_dffe:inst7.RD
+CLR => Memory_Unit_1Bit_dffe:inst5.CLR
+CLR => Memory_Unit_1Bit_dffe:inst6.CLR
+CLR => Memory_Unit_1Bit_dffe:inst4.CLR
+CLR => Memory_Unit_1Bit_dffe:inst7.CLR
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst4|Memory_Unit_1Bit_dffe:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst4|Memory_Unit_1Bit_dffe:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst4|Memory_Unit_1Bit_dffe:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst4|Memory_Unit_1Bit_dffe:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst5
+DOUT[3] <= Memory_Unit_1Bit_dffe:inst7.OUT
+DOUT[2] <= Memory_Unit_1Bit_dffe:inst6.OUT
+DOUT[1] <= Memory_Unit_1Bit_dffe:inst5.OUT
+DOUT[0] <= Memory_Unit_1Bit_dffe:inst4.OUT
+DIN[3] => Memory_Unit_1Bit_dffe:inst7.IN
+DIN[2] => Memory_Unit_1Bit_dffe:inst6.IN
+DIN[1] => Memory_Unit_1Bit_dffe:inst5.IN
+DIN[0] => Memory_Unit_1Bit_dffe:inst4.IN
+WR => Memory_Unit_1Bit_dffe:inst5.WR
+WR => Memory_Unit_1Bit_dffe:inst6.WR
+WR => Memory_Unit_1Bit_dffe:inst4.WR
+WR => Memory_Unit_1Bit_dffe:inst7.WR
+RD => Memory_Unit_1Bit_dffe:inst5.RD
+RD => Memory_Unit_1Bit_dffe:inst6.RD
+RD => Memory_Unit_1Bit_dffe:inst4.RD
+RD => Memory_Unit_1Bit_dffe:inst7.RD
+CLR => Memory_Unit_1Bit_dffe:inst5.CLR
+CLR => Memory_Unit_1Bit_dffe:inst6.CLR
+CLR => Memory_Unit_1Bit_dffe:inst4.CLR
+CLR => Memory_Unit_1Bit_dffe:inst7.CLR
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst5|Memory_Unit_1Bit_dffe:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst5|Memory_Unit_1Bit_dffe:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst5|Memory_Unit_1Bit_dffe:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst5|Memory_Unit_1Bit_dffe:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst6
+DOUT[3] <= Memory_Unit_1Bit_dffe:inst7.OUT
+DOUT[2] <= Memory_Unit_1Bit_dffe:inst6.OUT
+DOUT[1] <= Memory_Unit_1Bit_dffe:inst5.OUT
+DOUT[0] <= Memory_Unit_1Bit_dffe:inst4.OUT
+DIN[3] => Memory_Unit_1Bit_dffe:inst7.IN
+DIN[2] => Memory_Unit_1Bit_dffe:inst6.IN
+DIN[1] => Memory_Unit_1Bit_dffe:inst5.IN
+DIN[0] => Memory_Unit_1Bit_dffe:inst4.IN
+WR => Memory_Unit_1Bit_dffe:inst5.WR
+WR => Memory_Unit_1Bit_dffe:inst6.WR
+WR => Memory_Unit_1Bit_dffe:inst4.WR
+WR => Memory_Unit_1Bit_dffe:inst7.WR
+RD => Memory_Unit_1Bit_dffe:inst5.RD
+RD => Memory_Unit_1Bit_dffe:inst6.RD
+RD => Memory_Unit_1Bit_dffe:inst4.RD
+RD => Memory_Unit_1Bit_dffe:inst7.RD
+CLR => Memory_Unit_1Bit_dffe:inst5.CLR
+CLR => Memory_Unit_1Bit_dffe:inst6.CLR
+CLR => Memory_Unit_1Bit_dffe:inst4.CLR
+CLR => Memory_Unit_1Bit_dffe:inst7.CLR
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst6|Memory_Unit_1Bit_dffe:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst6|Memory_Unit_1Bit_dffe:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst6|Memory_Unit_1Bit_dffe:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst6|Memory_Unit_1Bit_dffe:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst7
+DOUT[3] <= Memory_Unit_1Bit_dffe:inst7.OUT
+DOUT[2] <= Memory_Unit_1Bit_dffe:inst6.OUT
+DOUT[1] <= Memory_Unit_1Bit_dffe:inst5.OUT
+DOUT[0] <= Memory_Unit_1Bit_dffe:inst4.OUT
+DIN[3] => Memory_Unit_1Bit_dffe:inst7.IN
+DIN[2] => Memory_Unit_1Bit_dffe:inst6.IN
+DIN[1] => Memory_Unit_1Bit_dffe:inst5.IN
+DIN[0] => Memory_Unit_1Bit_dffe:inst4.IN
+WR => Memory_Unit_1Bit_dffe:inst5.WR
+WR => Memory_Unit_1Bit_dffe:inst6.WR
+WR => Memory_Unit_1Bit_dffe:inst4.WR
+WR => Memory_Unit_1Bit_dffe:inst7.WR
+RD => Memory_Unit_1Bit_dffe:inst5.RD
+RD => Memory_Unit_1Bit_dffe:inst6.RD
+RD => Memory_Unit_1Bit_dffe:inst4.RD
+RD => Memory_Unit_1Bit_dffe:inst7.RD
+CLR => Memory_Unit_1Bit_dffe:inst5.CLR
+CLR => Memory_Unit_1Bit_dffe:inst6.CLR
+CLR => Memory_Unit_1Bit_dffe:inst4.CLR
+CLR => Memory_Unit_1Bit_dffe:inst7.CLR
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst7|Memory_Unit_1Bit_dffe:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst7|Memory_Unit_1Bit_dffe:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst7|Memory_Unit_1Bit_dffe:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|table_unit_32bit:inst5|table_unit_4bit:inst7|Memory_Unit_1Bit_dffe:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst3.ACLR
+IN => inst3.DATAIN
+WR => inst3.CLK
+RD => inst1.IN0
+
+
+|the_cache|counter_quanternary:inst6
+WCT <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+LA[1] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+LA[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+CLR => inst5.ACLR
+CLK => inst8.IN0
+
+
+|the_cache|memory_unit_8blocks:inst
+Q[7] <= Q~7.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q~6.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q~5.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q~4.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q~3.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q~2.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q~1.DB_MAX_OUTPUT_PORT_TYPE
+Q[0] <= Q~0.DB_MAX_OUTPUT_PORT_TYPE
+CA[4] => 74138:RD_DECODER.C
+CA[4] => 74138:WR_DECODER.C
+CA[3] => 74138:RD_DECODER.B
+CA[3] => 74138:WR_DECODER.B
+CA[2] => 74138:RD_DECODER.A
+CA[2] => 74138:WR_DECODER.A
+CA[1] => Memory_Unit_1Block:inst.W[1]
+CA[1] => Memory_Unit_1Block:inst1.W[1]
+CA[1] => Memory_Unit_1Block:inst2.W[1]
+CA[1] => Memory_Unit_1Block:inst3.W[1]
+CA[1] => Memory_Unit_1Block:inst4.W[1]
+CA[1] => Memory_Unit_1Block:inst5.W[1]
+CA[1] => Memory_Unit_1Block:inst6.W[1]
+CA[1] => Memory_Unit_1Block:inst7.W[1]
+CA[0] => Memory_Unit_1Block:inst.W[0]
+CA[0] => Memory_Unit_1Block:inst1.W[0]
+CA[0] => Memory_Unit_1Block:inst2.W[0]
+CA[0] => Memory_Unit_1Block:inst3.W[0]
+CA[0] => Memory_Unit_1Block:inst4.W[0]
+CA[0] => Memory_Unit_1Block:inst5.W[0]
+CA[0] => Memory_Unit_1Block:inst6.W[0]
+CA[0] => Memory_Unit_1Block:inst7.W[0]
+RD => 74138:RD_DECODER.G2AN
+WR => 74138:WR_DECODER.G2AN
+D[7] => Memory_Unit_1Block:inst.DIN[7]
+D[7] => Memory_Unit_1Block:inst1.DIN[7]
+D[7] => Memory_Unit_1Block:inst2.DIN[7]
+D[7] => Memory_Unit_1Block:inst3.DIN[7]
+D[7] => Memory_Unit_1Block:inst4.DIN[7]
+D[7] => Memory_Unit_1Block:inst5.DIN[7]
+D[7] => Memory_Unit_1Block:inst6.DIN[7]
+D[7] => Memory_Unit_1Block:inst7.DIN[7]
+D[6] => Memory_Unit_1Block:inst.DIN[6]
+D[6] => Memory_Unit_1Block:inst1.DIN[6]
+D[6] => Memory_Unit_1Block:inst2.DIN[6]
+D[6] => Memory_Unit_1Block:inst3.DIN[6]
+D[6] => Memory_Unit_1Block:inst4.DIN[6]
+D[6] => Memory_Unit_1Block:inst5.DIN[6]
+D[6] => Memory_Unit_1Block:inst6.DIN[6]
+D[6] => Memory_Unit_1Block:inst7.DIN[6]
+D[5] => Memory_Unit_1Block:inst.DIN[5]
+D[5] => Memory_Unit_1Block:inst1.DIN[5]
+D[5] => Memory_Unit_1Block:inst2.DIN[5]
+D[5] => Memory_Unit_1Block:inst3.DIN[5]
+D[5] => Memory_Unit_1Block:inst4.DIN[5]
+D[5] => Memory_Unit_1Block:inst5.DIN[5]
+D[5] => Memory_Unit_1Block:inst6.DIN[5]
+D[5] => Memory_Unit_1Block:inst7.DIN[5]
+D[4] => Memory_Unit_1Block:inst.DIN[4]
+D[4] => Memory_Unit_1Block:inst1.DIN[4]
+D[4] => Memory_Unit_1Block:inst2.DIN[4]
+D[4] => Memory_Unit_1Block:inst3.DIN[4]
+D[4] => Memory_Unit_1Block:inst4.DIN[4]
+D[4] => Memory_Unit_1Block:inst5.DIN[4]
+D[4] => Memory_Unit_1Block:inst6.DIN[4]
+D[4] => Memory_Unit_1Block:inst7.DIN[4]
+D[3] => Memory_Unit_1Block:inst.DIN[3]
+D[3] => Memory_Unit_1Block:inst1.DIN[3]
+D[3] => Memory_Unit_1Block:inst2.DIN[3]
+D[3] => Memory_Unit_1Block:inst3.DIN[3]
+D[3] => Memory_Unit_1Block:inst4.DIN[3]
+D[3] => Memory_Unit_1Block:inst5.DIN[3]
+D[3] => Memory_Unit_1Block:inst6.DIN[3]
+D[3] => Memory_Unit_1Block:inst7.DIN[3]
+D[2] => Memory_Unit_1Block:inst.DIN[2]
+D[2] => Memory_Unit_1Block:inst1.DIN[2]
+D[2] => Memory_Unit_1Block:inst2.DIN[2]
+D[2] => Memory_Unit_1Block:inst3.DIN[2]
+D[2] => Memory_Unit_1Block:inst4.DIN[2]
+D[2] => Memory_Unit_1Block:inst5.DIN[2]
+D[2] => Memory_Unit_1Block:inst6.DIN[2]
+D[2] => Memory_Unit_1Block:inst7.DIN[2]
+D[1] => Memory_Unit_1Block:inst.DIN[1]
+D[1] => Memory_Unit_1Block:inst1.DIN[1]
+D[1] => Memory_Unit_1Block:inst2.DIN[1]
+D[1] => Memory_Unit_1Block:inst3.DIN[1]
+D[1] => Memory_Unit_1Block:inst4.DIN[1]
+D[1] => Memory_Unit_1Block:inst5.DIN[1]
+D[1] => Memory_Unit_1Block:inst6.DIN[1]
+D[1] => Memory_Unit_1Block:inst7.DIN[1]
+D[0] => Memory_Unit_1Block:inst.DIN[0]
+D[0] => Memory_Unit_1Block:inst1.DIN[0]
+D[0] => Memory_Unit_1Block:inst2.DIN[0]
+D[0] => Memory_Unit_1Block:inst3.DIN[0]
+D[0] => Memory_Unit_1Block:inst4.DIN[0]
+D[0] => Memory_Unit_1Block:inst5.DIN[0]
+D[0] => Memory_Unit_1Block:inst6.DIN[0]
+D[0] => Memory_Unit_1Block:inst7.DIN[0]
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst
+DOUT[7] <= DOUT~7.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[6] <= DOUT~6.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[5] <= DOUT~5.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[4] <= DOUT~4.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[3] <= DOUT~3.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[2] <= DOUT~2.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[1] <= DOUT~1.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[0] <= DOUT~0.DB_MAX_OUTPUT_PORT_TYPE
+W[0] => inst8.IN0
+W[0] => inst18.IN1
+W[0] => inst20.IN0
+W[1] => inst9.IN0
+W[1] => inst19.IN1
+W[1] => inst20.IN1
+WR => inst4.IN1
+WR => inst12.IN1
+WR => inst14.IN1
+WR => inst16.IN1
+RD => inst5.IN0
+RD => inst13.IN0
+RD => inst15.IN0
+RD => inst17.IN0
+DIN[7] => Memory_Unit_1Byte:inst.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst1.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst2.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst3.DIN[7]
+DIN[6] => Memory_Unit_1Byte:inst.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst1.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst2.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst3.DIN[6]
+DIN[5] => Memory_Unit_1Byte:inst.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst1.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst2.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst3.DIN[5]
+DIN[4] => Memory_Unit_1Byte:inst.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst1.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst2.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst3.DIN[4]
+DIN[3] => Memory_Unit_1Byte:inst.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst1.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst2.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst3.DIN[3]
+DIN[2] => Memory_Unit_1Byte:inst.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst1.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst2.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst3.DIN[2]
+DIN[1] => Memory_Unit_1Byte:inst.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst1.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst2.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst3.DIN[1]
+DIN[0] => Memory_Unit_1Byte:inst.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst1.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst2.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst3.DIN[0]
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst1
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst2
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst3
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|74138:RD_DECODER
+Y7N <= 22.DB_MAX_OUTPUT_PORT_TYPE
+G1 => 8.IN0
+G2BN => 1.IN1
+G2AN => 1.IN2
+B => 10.IN0
+A => 9.IN0
+C => 11.IN0
+Y6N <= 21.DB_MAX_OUTPUT_PORT_TYPE
+Y5N <= 20.DB_MAX_OUTPUT_PORT_TYPE
+Y4N <= 19.DB_MAX_OUTPUT_PORT_TYPE
+Y3N <= 18.DB_MAX_OUTPUT_PORT_TYPE
+Y2N <= 17.DB_MAX_OUTPUT_PORT_TYPE
+Y1N <= 16.DB_MAX_OUTPUT_PORT_TYPE
+Y0N <= 15.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|the_cache|memory_unit_8blocks:inst|74138:WR_DECODER
+Y7N <= 22.DB_MAX_OUTPUT_PORT_TYPE
+G1 => 8.IN0
+G2BN => 1.IN1
+G2AN => 1.IN2
+B => 10.IN0
+A => 9.IN0
+C => 11.IN0
+Y6N <= 21.DB_MAX_OUTPUT_PORT_TYPE
+Y5N <= 20.DB_MAX_OUTPUT_PORT_TYPE
+Y4N <= 19.DB_MAX_OUTPUT_PORT_TYPE
+Y3N <= 18.DB_MAX_OUTPUT_PORT_TYPE
+Y2N <= 17.DB_MAX_OUTPUT_PORT_TYPE
+Y1N <= 16.DB_MAX_OUTPUT_PORT_TYPE
+Y0N <= 15.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1
+DOUT[7] <= DOUT~7.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[6] <= DOUT~6.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[5] <= DOUT~5.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[4] <= DOUT~4.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[3] <= DOUT~3.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[2] <= DOUT~2.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[1] <= DOUT~1.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[0] <= DOUT~0.DB_MAX_OUTPUT_PORT_TYPE
+W[0] => inst8.IN0
+W[0] => inst18.IN1
+W[0] => inst20.IN0
+W[1] => inst9.IN0
+W[1] => inst19.IN1
+W[1] => inst20.IN1
+WR => inst4.IN1
+WR => inst12.IN1
+WR => inst14.IN1
+WR => inst16.IN1
+RD => inst5.IN0
+RD => inst13.IN0
+RD => inst15.IN0
+RD => inst17.IN0
+DIN[7] => Memory_Unit_1Byte:inst.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst1.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst2.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst3.DIN[7]
+DIN[6] => Memory_Unit_1Byte:inst.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst1.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst2.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst3.DIN[6]
+DIN[5] => Memory_Unit_1Byte:inst.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst1.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst2.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst3.DIN[5]
+DIN[4] => Memory_Unit_1Byte:inst.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst1.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst2.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst3.DIN[4]
+DIN[3] => Memory_Unit_1Byte:inst.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst1.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst2.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst3.DIN[3]
+DIN[2] => Memory_Unit_1Byte:inst.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst1.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst2.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst3.DIN[2]
+DIN[1] => Memory_Unit_1Byte:inst.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst1.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst2.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst3.DIN[1]
+DIN[0] => Memory_Unit_1Byte:inst.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst1.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst2.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst3.DIN[0]
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst1
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst2
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst3
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2
+DOUT[7] <= DOUT~7.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[6] <= DOUT~6.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[5] <= DOUT~5.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[4] <= DOUT~4.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[3] <= DOUT~3.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[2] <= DOUT~2.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[1] <= DOUT~1.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[0] <= DOUT~0.DB_MAX_OUTPUT_PORT_TYPE
+W[0] => inst8.IN0
+W[0] => inst18.IN1
+W[0] => inst20.IN0
+W[1] => inst9.IN0
+W[1] => inst19.IN1
+W[1] => inst20.IN1
+WR => inst4.IN1
+WR => inst12.IN1
+WR => inst14.IN1
+WR => inst16.IN1
+RD => inst5.IN0
+RD => inst13.IN0
+RD => inst15.IN0
+RD => inst17.IN0
+DIN[7] => Memory_Unit_1Byte:inst.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst1.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst2.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst3.DIN[7]
+DIN[6] => Memory_Unit_1Byte:inst.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst1.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst2.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst3.DIN[6]
+DIN[5] => Memory_Unit_1Byte:inst.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst1.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst2.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst3.DIN[5]
+DIN[4] => Memory_Unit_1Byte:inst.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst1.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst2.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst3.DIN[4]
+DIN[3] => Memory_Unit_1Byte:inst.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst1.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst2.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst3.DIN[3]
+DIN[2] => Memory_Unit_1Byte:inst.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst1.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst2.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst3.DIN[2]
+DIN[1] => Memory_Unit_1Byte:inst.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst1.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst2.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst3.DIN[1]
+DIN[0] => Memory_Unit_1Byte:inst.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst1.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst2.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst3.DIN[0]
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst1
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst2
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst3
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3
+DOUT[7] <= DOUT~7.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[6] <= DOUT~6.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[5] <= DOUT~5.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[4] <= DOUT~4.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[3] <= DOUT~3.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[2] <= DOUT~2.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[1] <= DOUT~1.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[0] <= DOUT~0.DB_MAX_OUTPUT_PORT_TYPE
+W[0] => inst8.IN0
+W[0] => inst18.IN1
+W[0] => inst20.IN0
+W[1] => inst9.IN0
+W[1] => inst19.IN1
+W[1] => inst20.IN1
+WR => inst4.IN1
+WR => inst12.IN1
+WR => inst14.IN1
+WR => inst16.IN1
+RD => inst5.IN0
+RD => inst13.IN0
+RD => inst15.IN0
+RD => inst17.IN0
+DIN[7] => Memory_Unit_1Byte:inst.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst1.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst2.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst3.DIN[7]
+DIN[6] => Memory_Unit_1Byte:inst.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst1.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst2.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst3.DIN[6]
+DIN[5] => Memory_Unit_1Byte:inst.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst1.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst2.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst3.DIN[5]
+DIN[4] => Memory_Unit_1Byte:inst.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst1.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst2.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst3.DIN[4]
+DIN[3] => Memory_Unit_1Byte:inst.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst1.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst2.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst3.DIN[3]
+DIN[2] => Memory_Unit_1Byte:inst.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst1.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst2.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst3.DIN[2]
+DIN[1] => Memory_Unit_1Byte:inst.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst1.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst2.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst3.DIN[1]
+DIN[0] => Memory_Unit_1Byte:inst.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst1.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst2.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst3.DIN[0]
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst1
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst2
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst3
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4
+DOUT[7] <= DOUT~7.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[6] <= DOUT~6.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[5] <= DOUT~5.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[4] <= DOUT~4.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[3] <= DOUT~3.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[2] <= DOUT~2.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[1] <= DOUT~1.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[0] <= DOUT~0.DB_MAX_OUTPUT_PORT_TYPE
+W[0] => inst8.IN0
+W[0] => inst18.IN1
+W[0] => inst20.IN0
+W[1] => inst9.IN0
+W[1] => inst19.IN1
+W[1] => inst20.IN1
+WR => inst4.IN1
+WR => inst12.IN1
+WR => inst14.IN1
+WR => inst16.IN1
+RD => inst5.IN0
+RD => inst13.IN0
+RD => inst15.IN0
+RD => inst17.IN0
+DIN[7] => Memory_Unit_1Byte:inst.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst1.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst2.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst3.DIN[7]
+DIN[6] => Memory_Unit_1Byte:inst.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst1.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst2.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst3.DIN[6]
+DIN[5] => Memory_Unit_1Byte:inst.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst1.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst2.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst3.DIN[5]
+DIN[4] => Memory_Unit_1Byte:inst.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst1.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst2.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst3.DIN[4]
+DIN[3] => Memory_Unit_1Byte:inst.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst1.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst2.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst3.DIN[3]
+DIN[2] => Memory_Unit_1Byte:inst.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst1.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst2.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst3.DIN[2]
+DIN[1] => Memory_Unit_1Byte:inst.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst1.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst2.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst3.DIN[1]
+DIN[0] => Memory_Unit_1Byte:inst.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst1.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst2.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst3.DIN[0]
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst1
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst2
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst3
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5
+DOUT[7] <= DOUT~7.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[6] <= DOUT~6.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[5] <= DOUT~5.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[4] <= DOUT~4.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[3] <= DOUT~3.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[2] <= DOUT~2.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[1] <= DOUT~1.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[0] <= DOUT~0.DB_MAX_OUTPUT_PORT_TYPE
+W[0] => inst8.IN0
+W[0] => inst18.IN1
+W[0] => inst20.IN0
+W[1] => inst9.IN0
+W[1] => inst19.IN1
+W[1] => inst20.IN1
+WR => inst4.IN1
+WR => inst12.IN1
+WR => inst14.IN1
+WR => inst16.IN1
+RD => inst5.IN0
+RD => inst13.IN0
+RD => inst15.IN0
+RD => inst17.IN0
+DIN[7] => Memory_Unit_1Byte:inst.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst1.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst2.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst3.DIN[7]
+DIN[6] => Memory_Unit_1Byte:inst.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst1.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst2.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst3.DIN[6]
+DIN[5] => Memory_Unit_1Byte:inst.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst1.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst2.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst3.DIN[5]
+DIN[4] => Memory_Unit_1Byte:inst.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst1.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst2.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst3.DIN[4]
+DIN[3] => Memory_Unit_1Byte:inst.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst1.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst2.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst3.DIN[3]
+DIN[2] => Memory_Unit_1Byte:inst.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst1.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst2.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst3.DIN[2]
+DIN[1] => Memory_Unit_1Byte:inst.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst1.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst2.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst3.DIN[1]
+DIN[0] => Memory_Unit_1Byte:inst.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst1.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst2.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst3.DIN[0]
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst1
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst2
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst3
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6
+DOUT[7] <= DOUT~7.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[6] <= DOUT~6.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[5] <= DOUT~5.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[4] <= DOUT~4.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[3] <= DOUT~3.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[2] <= DOUT~2.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[1] <= DOUT~1.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[0] <= DOUT~0.DB_MAX_OUTPUT_PORT_TYPE
+W[0] => inst8.IN0
+W[0] => inst18.IN1
+W[0] => inst20.IN0
+W[1] => inst9.IN0
+W[1] => inst19.IN1
+W[1] => inst20.IN1
+WR => inst4.IN1
+WR => inst12.IN1
+WR => inst14.IN1
+WR => inst16.IN1
+RD => inst5.IN0
+RD => inst13.IN0
+RD => inst15.IN0
+RD => inst17.IN0
+DIN[7] => Memory_Unit_1Byte:inst.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst1.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst2.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst3.DIN[7]
+DIN[6] => Memory_Unit_1Byte:inst.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst1.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst2.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst3.DIN[6]
+DIN[5] => Memory_Unit_1Byte:inst.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst1.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst2.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst3.DIN[5]
+DIN[4] => Memory_Unit_1Byte:inst.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst1.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst2.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst3.DIN[4]
+DIN[3] => Memory_Unit_1Byte:inst.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst1.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst2.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst3.DIN[3]
+DIN[2] => Memory_Unit_1Byte:inst.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst1.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst2.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst3.DIN[2]
+DIN[1] => Memory_Unit_1Byte:inst.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst1.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst2.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst3.DIN[1]
+DIN[0] => Memory_Unit_1Byte:inst.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst1.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst2.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst3.DIN[0]
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst1
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst2
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst3
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7
+DOUT[7] <= DOUT~7.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[6] <= DOUT~6.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[5] <= DOUT~5.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[4] <= DOUT~4.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[3] <= DOUT~3.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[2] <= DOUT~2.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[1] <= DOUT~1.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[0] <= DOUT~0.DB_MAX_OUTPUT_PORT_TYPE
+W[0] => inst8.IN0
+W[0] => inst18.IN1
+W[0] => inst20.IN0
+W[1] => inst9.IN0
+W[1] => inst19.IN1
+W[1] => inst20.IN1
+WR => inst4.IN1
+WR => inst12.IN1
+WR => inst14.IN1
+WR => inst16.IN1
+RD => inst5.IN0
+RD => inst13.IN0
+RD => inst15.IN0
+RD => inst17.IN0
+DIN[7] => Memory_Unit_1Byte:inst.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst1.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst2.DIN[7]
+DIN[7] => Memory_Unit_1Byte:inst3.DIN[7]
+DIN[6] => Memory_Unit_1Byte:inst.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst1.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst2.DIN[6]
+DIN[6] => Memory_Unit_1Byte:inst3.DIN[6]
+DIN[5] => Memory_Unit_1Byte:inst.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst1.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst2.DIN[5]
+DIN[5] => Memory_Unit_1Byte:inst3.DIN[5]
+DIN[4] => Memory_Unit_1Byte:inst.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst1.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst2.DIN[4]
+DIN[4] => Memory_Unit_1Byte:inst3.DIN[4]
+DIN[3] => Memory_Unit_1Byte:inst.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst1.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst2.DIN[3]
+DIN[3] => Memory_Unit_1Byte:inst3.DIN[3]
+DIN[2] => Memory_Unit_1Byte:inst.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst1.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst2.DIN[2]
+DIN[2] => Memory_Unit_1Byte:inst3.DIN[2]
+DIN[1] => Memory_Unit_1Byte:inst.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst1.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst2.DIN[1]
+DIN[1] => Memory_Unit_1Byte:inst3.DIN[1]
+DIN[0] => Memory_Unit_1Byte:inst.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst1.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst2.DIN[0]
+DIN[0] => Memory_Unit_1Byte:inst3.DIN[0]
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst1
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst2
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst3
+DOUT[7] <= Memory_Unit_1Bit:inst7.OUT
+DOUT[6] <= Memory_Unit_1Bit:inst6.OUT
+DOUT[5] <= Memory_Unit_1Bit:inst5.OUT
+DOUT[4] <= Memory_Unit_1Bit:inst4.OUT
+DOUT[3] <= Memory_Unit_1Bit:inst3.OUT
+DOUT[2] <= Memory_Unit_1Bit:inst2.OUT
+DOUT[1] <= Memory_Unit_1Bit:inst1.OUT
+DOUT[0] <= Memory_Unit_1Bit:inst.OUT
+DIN[7] => Memory_Unit_1Bit:inst7.IN
+DIN[6] => Memory_Unit_1Bit:inst6.IN
+DIN[5] => Memory_Unit_1Bit:inst5.IN
+DIN[4] => Memory_Unit_1Bit:inst4.IN
+DIN[3] => Memory_Unit_1Bit:inst3.IN
+DIN[2] => Memory_Unit_1Bit:inst2.IN
+DIN[1] => Memory_Unit_1Bit:inst1.IN
+DIN[0] => Memory_Unit_1Bit:inst.IN
+WR => Memory_Unit_1Bit:inst.WR
+WR => Memory_Unit_1Bit:inst1.WR
+WR => Memory_Unit_1Bit:inst2.WR
+WR => Memory_Unit_1Bit:inst3.WR
+WR => Memory_Unit_1Bit:inst4.WR
+WR => Memory_Unit_1Bit:inst5.WR
+WR => Memory_Unit_1Bit:inst6.WR
+WR => Memory_Unit_1Bit:inst7.WR
+RD => Memory_Unit_1Bit:inst.RD
+RD => Memory_Unit_1Bit:inst1.RD
+RD => Memory_Unit_1Bit:inst2.RD
+RD => Memory_Unit_1Bit:inst3.RD
+RD => Memory_Unit_1Bit:inst4.RD
+RD => Memory_Unit_1Bit:inst5.RD
+RD => Memory_Unit_1Bit:inst6.RD
+RD => Memory_Unit_1Bit:inst7.RD
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst1
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst2
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst3
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst4
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst5
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst6
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst7
+OUT <= tri_gate.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst.DATAIN
+WR => inst2.IN0
+RD => inst1.IN0
+
+
+|the_cache|address_combiner:inst7
+CA[4] <= A[4].DB_MAX_OUTPUT_PORT_TYPE
+CA[3] <= A[3].DB_MAX_OUTPUT_PORT_TYPE
+CA[2] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+CA[1] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+CA[0] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+A[4] => CA[4].DATAIN
+A[3] => CA[3].DATAIN
+A[2] => CA[2].DATAIN
+A[1] => inst2.IN0
+A[0] => inst4.IN1
+M => inst2.IN1
+M => inst5.IN0
+M => inst4.IN0
+LA[1] => inst.IN0
+LA[0] => inst3.IN1
+
+

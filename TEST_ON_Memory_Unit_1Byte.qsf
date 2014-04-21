@@ -1,0 +1,97 @@
+# Copyright (C) 1991-2005 Altera Corporation
+# Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+# support information,  device programming or simulation file,  and any other
+# associated  documentation or information  provided by  Altera  or a partner
+# under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+# to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+# other  use  of such  megafunction  design,  netlist,  support  information,
+# device programming or simulation file,  or any other  related documentation
+# or information  is prohibited  for  any  other purpose,  including, but not
+# limited to  modification,  reverse engineering,  de-compiling, or use  with
+# any other  silicon devices,  unless such use is  explicitly  licensed under
+# a separate agreement with  Altera  or a megafunction partner.  Title to the
+# intellectual property,  including patents,  copyrights,  trademarks,  trade
+# secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+# support  information,  device programming or simulation file,  or any other
+# related documentation or information provided by  Altera  or a megafunction
+# partner, remains with Altera, the megafunction partner, or their respective
+# licensors. No other licenses, including any licenses needed under any third
+# party's intellectual property, are provided herein.
+
+
+# The default values for assignments are stored in the file
+#		TEST_ON_Memory_Unit_1Byte_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "4.2 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:54:06  APRIL 09, 2014"
+set_global_assignment -name LAST_QUARTUS_VERSION "4.2 SP1"
+set_global_assignment -name BDF_FILE "Memory_Unit_1Block(4Bytes).bdf"
+set_global_assignment -name BDF_FILE address_combiner.bdf
+set_global_assignment -name BDF_FILE counter_quanternary.bdf
+set_global_assignment -name BDF_FILE Memory_Unit_1Bit.bdf
+set_global_assignment -name BDF_FILE memory_unit_1block.bdf
+set_global_assignment -name BDF_FILE Memory_Unit_1Byte.bdf
+set_global_assignment -name BDF_FILE memory_unit_8blocks.bdf
+set_global_assignment -name BDF_FILE table_unit_4bit.bdf
+set_global_assignment -name BDF_FILE table_unit_32bit.bdf
+set_global_assignment -name BDF_FILE the_cache.bdf
+set_global_assignment -name CDF_FILE TEST_ON_Memory_Unit_1Byte.cdf
+set_global_assignment -name BDF_FILE Memory_Unit_1Bit_dffe.bdf
+
+# Pin & Location Assignments
+# ==========================
+set_location_assignment PIN_61 -to RD
+set_location_assignment PIN_65 -to CLR
+set_location_assignment PIN_20 -to A[2]
+set_location_assignment PIN_21 -to A[3]
+set_location_assignment PIN_23 -to A[4]
+set_location_assignment PIN_41 -to A[5]
+set_location_assignment PIN_42 -to A[6]
+set_location_assignment PIN_43 -to A[7]
+set_location_assignment PIN_18 -to A[0]
+set_location_assignment PIN_19 -to A[1]
+set_location_assignment PIN_74 -to D[0]
+set_location_assignment PIN_75 -to D[1]
+set_location_assignment PIN_76 -to D[2]
+set_location_assignment PIN_77 -to D[3]
+set_location_assignment PIN_78 -to D[4]
+set_location_assignment PIN_79 -to D[5]
+set_location_assignment PIN_80 -to D[6]
+set_location_assignment PIN_81 -to D[7]
+set_location_assignment PIN_82 -to MA[0]
+set_location_assignment PIN_83 -to MA[1]
+set_location_assignment PIN_84 -to MA[2]
+set_location_assignment PIN_85 -to MA[3]
+set_location_assignment PIN_86 -to MA[4]
+set_location_assignment PIN_87 -to MA[5]
+set_location_assignment PIN_88 -to MA[6]
+set_location_assignment PIN_93 -to MA[7]
+set_location_assignment PIN_94 -to MD[0]
+set_location_assignment PIN_95 -to MD[1]
+set_location_assignment PIN_96 -to MD[2]
+set_location_assignment PIN_97 -to MD[3]
+set_location_assignment PIN_98 -to MD[4]
+set_location_assignment PIN_99 -to MD[5]
+set_location_assignment PIN_100 -to MD[6]
+set_location_assignment PIN_101 -to MD[7]
+set_location_assignment PIN_63 -to T2
+set_location_assignment PIN_67 -to MR
+set_location_assignment PIN_7 -to TEST_OUT
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name TOP_LEVEL_ENTITY the_cache
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE EP1C6Q240C8

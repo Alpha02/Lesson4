@@ -1,0 +1,894 @@
+Analysis & Synthesis report for TEST_ON_Memory_Unit_1Byte
+Wed Apr 16 16:58:59 2014
+Version 4.2 Build 178 01/19/2005 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Hierarchy
+  5. User-Specified and Inferred Latches
+  6. General Register Statistics
+  7. WYSIWYG Cells
+  8. Analysis & Synthesis Resource Utilization by Entity
+  9. Analysis & Synthesis Equations
+ 10. Analysis & Synthesis Source Files Read
+ 11. Analysis & Synthesis Resource Usage Summary
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+support information,  device programming or simulation file,  and any other
+associated  documentation or information  provided by  Altera  or a partner
+under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+other  use  of such  megafunction  design,  netlist,  support  information,
+device programming or simulation file,  or any other  related documentation
+or information  is prohibited  for  any  other purpose,  including, but not
+limited to  modification,  reverse engineering,  de-compiling, or use  with
+any other  silicon devices,  unless such use is  explicitly  licensed under
+a separate agreement with  Altera  or a megafunction partner.  Title to the
+intellectual property,  including patents,  copyrights,  trademarks,  trade
+secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+support  information,  device programming or simulation file,  or any other
+related documentation or information provided by  Altera  or a megafunction
+partner, remains with Altera, the megafunction partner, or their respective
+licensors. No other licenses, including any licenses needed under any third
+party's intellectual property, are provided herein.
+
+
+
++-----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                ;
++-----------------------------+-----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Wed Apr 16 16:58:59 2014         ;
+; Quartus II Version          ; 4.2 Build 178 01/19/2005 SP 1 SJ Full Version ;
+; Revision Name               ; TEST_ON_Memory_Unit_1Byte                     ;
+; Top-level Entity Name       ; the_cache                                     ;
+; Family                      ; Cyclone                                       ;
+; Total logic elements        ; 5                                             ;
+; Total pins                  ; 37                                            ;
+; Total virtual pins          ; 0                                             ;
+; Total memory bits           ; 0                                             ;
+; Total PLLs                  ; 0                                             ;
++-----------------------------+-----------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                 ;
++--------------------------------------------------------------------+--------------+---------------------------+
+; Option                                                             ; Setting      ; Default Value             ;
++--------------------------------------------------------------------+--------------+---------------------------+
+; Device                                                             ; EP1C6Q240C8  ;                           ;
+; Family name                                                        ; Cyclone      ; Stratix                   ;
+; Top-level entity name                                              ; the_cache    ; TEST_ON_Memory_Unit_1Byte ;
+; Use smart compilation                                              ; Normal       ; Normal                    ;
+; Restructure Multiplexers                                           ; Auto         ; Auto                      ;
+; Create Debugging Nodes for IP Cores                                ; off          ; off                       ;
+; Preserve fewer node names                                          ; On           ; On                        ;
+; Disable OpenCore Plus hardware evaluation                          ; Off          ; Off                       ;
+; Verilog Version                                                    ; Verilog_2001 ; Verilog_2001              ;
+; VHDL Version                                                       ; VHDL93       ; VHDL93                    ;
+; State Machine Processing                                           ; Auto         ; Auto                      ;
+; Extract Verilog State Machines                                     ; On           ; On                        ;
+; Extract VHDL State Machines                                        ; On           ; On                        ;
+; NOT Gate Push-Back                                                 ; On           ; On                        ;
+; Power-Up Don't Care                                                ; On           ; On                        ;
+; Remove Redundant Logic Cells                                       ; Off          ; Off                       ;
+; Remove Duplicate Registers                                         ; On           ; On                        ;
+; Ignore CARRY Buffers                                               ; Off          ; Off                       ;
+; Ignore CASCADE Buffers                                             ; Off          ; Off                       ;
+; Ignore GLOBAL Buffers                                              ; Off          ; Off                       ;
+; Ignore ROW GLOBAL Buffers                                          ; Off          ; Off                       ;
+; Ignore LCELL Buffers                                               ; Off          ; Off                       ;
+; Ignore SOFT Buffers                                                ; On           ; On                        ;
+; Limit AHDL Integers to 32 Bits                                     ; Off          ; Off                       ;
+; Optimization Technique -- Cyclone                                  ; Balanced     ; Balanced                  ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II ; 70           ; 70                        ;
+; Auto Carry Chains                                                  ; On           ; On                        ;
+; Auto Open-Drain Pins                                               ; On           ; On                        ;
+; Remove Duplicate Logic                                             ; On           ; On                        ;
+; Perform WYSIWYG Primitive Resynthesis                              ; Off          ; Off                       ;
+; Perform gate-level register retiming                               ; Off          ; Off                       ;
+; Allow register retiming to trade off Tsu/Tco with Fmax             ; On           ; On                        ;
+; Auto ROM Replacement                                               ; On           ; On                        ;
+; Auto RAM Replacement                                               ; On           ; On                        ;
+; Auto Shift Register Replacement                                    ; On           ; On                        ;
+; Auto Clock Enable Replacement                                      ; On           ; On                        ;
+; Allows Synchronous Control Signal Usage in Normal Mode Logic Cells ; On           ; On                        ;
+; Auto RAM Block Balancing                                           ; On           ; On                        ;
+; Auto Resource Sharing                                              ; Off          ; Off                       ;
+; Allow Any RAM Size For Recognition                                 ; Off          ; Off                       ;
+; Allow Any ROM Size For Recognition                                 ; Off          ; Off                       ;
+; Allow Any Shift Register Size For Recognition                      ; Off          ; Off                       ;
+; Enable M512 Memory Blocks                                          ; On           ; On                        ;
++--------------------------------------------------------------------+--------------+---------------------------+
+
+
++-----------+
+; Hierarchy ;
++-----------+
+the_cache
+ |-- memory_unit_8blocks:inst
+      |-- memory_unit_1block:inst
+           |-- Memory_Unit_1Byte:inst
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst1
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst2
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst3
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+      |-- memory_unit_1block:inst1
+           |-- Memory_Unit_1Byte:inst
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst1
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst2
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst3
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+      |-- memory_unit_1block:inst2
+           |-- Memory_Unit_1Byte:inst
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst1
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst2
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst3
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+      |-- memory_unit_1block:inst3
+           |-- Memory_Unit_1Byte:inst
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst1
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst2
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst3
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+      |-- memory_unit_1block:inst4
+           |-- Memory_Unit_1Byte:inst
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst1
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst2
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst3
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+      |-- memory_unit_1block:inst5
+           |-- Memory_Unit_1Byte:inst
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst1
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst2
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst3
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+      |-- memory_unit_1block:inst6
+           |-- Memory_Unit_1Byte:inst
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst1
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst2
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst3
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+      |-- memory_unit_1block:inst7
+           |-- Memory_Unit_1Byte:inst
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst1
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst2
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+           |-- Memory_Unit_1Byte:inst3
+                |-- Memory_Unit_1Bit:inst
+                |-- Memory_Unit_1Bit:inst1
+                |-- Memory_Unit_1Bit:inst2
+                |-- Memory_Unit_1Bit:inst3
+                |-- Memory_Unit_1Bit:inst4
+                |-- Memory_Unit_1Bit:inst5
+                |-- Memory_Unit_1Bit:inst6
+                |-- Memory_Unit_1Bit:inst7
+      |-- 74138:RD_DECODER
+      |-- 74138:WR_DECODER
+ |-- table_unit_32bit:inst5
+      |-- table_unit_4bit:inst
+           |-- Memory_Unit_1Bit_dffe:inst4
+           |-- Memory_Unit_1Bit_dffe:inst5
+           |-- Memory_Unit_1Bit_dffe:inst6
+           |-- Memory_Unit_1Bit_dffe:inst7
+      |-- table_unit_4bit:inst1
+           |-- Memory_Unit_1Bit_dffe:inst4
+           |-- Memory_Unit_1Bit_dffe:inst5
+           |-- Memory_Unit_1Bit_dffe:inst6
+           |-- Memory_Unit_1Bit_dffe:inst7
+      |-- table_unit_4bit:inst2
+           |-- Memory_Unit_1Bit_dffe:inst4
+           |-- Memory_Unit_1Bit_dffe:inst5
+           |-- Memory_Unit_1Bit_dffe:inst6
+           |-- Memory_Unit_1Bit_dffe:inst7
+      |-- table_unit_4bit:inst3
+           |-- Memory_Unit_1Bit_dffe:inst4
+           |-- Memory_Unit_1Bit_dffe:inst5
+           |-- Memory_Unit_1Bit_dffe:inst6
+           |-- Memory_Unit_1Bit_dffe:inst7
+      |-- table_unit_4bit:inst4
+           |-- Memory_Unit_1Bit_dffe:inst4
+           |-- Memory_Unit_1Bit_dffe:inst5
+           |-- Memory_Unit_1Bit_dffe:inst6
+           |-- Memory_Unit_1Bit_dffe:inst7
+      |-- table_unit_4bit:inst5
+           |-- Memory_Unit_1Bit_dffe:inst4
+           |-- Memory_Unit_1Bit_dffe:inst5
+           |-- Memory_Unit_1Bit_dffe:inst6
+           |-- Memory_Unit_1Bit_dffe:inst7
+      |-- table_unit_4bit:inst6
+           |-- Memory_Unit_1Bit_dffe:inst4
+           |-- Memory_Unit_1Bit_dffe:inst5
+           |-- Memory_Unit_1Bit_dffe:inst6
+           |-- Memory_Unit_1Bit_dffe:inst7
+      |-- table_unit_4bit:inst7
+           |-- Memory_Unit_1Bit_dffe:inst4
+           |-- Memory_Unit_1Bit_dffe:inst5
+           |-- Memory_Unit_1Bit_dffe:inst6
+           |-- Memory_Unit_1Bit_dffe:inst7
+      |-- 74138:RD_DECODER
+      |-- 74138:WR_DECODER
+ |-- counter_quanternary:inst6
+ |-- address_combiner:inst7
+
+
++------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                        ;
++-------------------------------------------------------------------------------------------------------+----+
+; Latch Name                                                                                            ;    ;
++-------------------------------------------------------------------------------------------------------+----+
+; memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst|inst  ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst|inst  ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst|inst  ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst|inst  ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst|inst  ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst|inst  ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst|inst  ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst|inst   ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst1|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst1|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst1|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst1|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst1|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst1|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst1|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst1|inst  ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst2|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst2|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst2|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst2|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst2|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst2|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst2|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst2|inst  ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst3|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst3|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst3|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst3|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst3|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst3|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst3|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst3|inst  ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst4|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst4|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst4|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst4|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst4|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst4|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst4|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst4|inst  ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst5|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst5|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst5|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst5|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst5|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst5|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst5|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst5|inst  ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst6|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst6|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst6|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst6|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst6|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst6|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst6|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst6|inst  ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst7|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst7|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst7|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst7|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst7|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst7|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst7|inst ;    ;
+; memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst3|Memory_Unit_1Bit:inst7|inst  ;    ;
+; Number of user-specified and inferred latches                                                         ; 64 ;
++-------------------------------------------------------------------------------------------------------+----+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 3     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 3     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1     ;
+; Number of registers using Output Enable      ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------+
+; WYSIWYG Cells                                                  ;
++--------------------------------------------------------+-------+
+; Statistic                                              ; Value ;
++--------------------------------------------------------+-------+
+; Number of WYSIWYG cells                                ; 0     ;
+; Number of synthesis-generated cells                    ; 5     ;
+; Number of WYSIWYG LUTs                                 ; 0     ;
+; Number of synthesis-generated LUTs                     ; 3     ;
+; Number of WYSIWYG registers                            ; 0     ;
+; Number of synthesis-generated registers                ; 3     ;
+; Number of cells with combinational logic only          ; 2     ;
+; Number of cells with registers only                    ; 2     ;
+; Number of cells with combinational logic and registers ; 1     ;
++--------------------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                      ;
++----------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+--------------------------------------------------------------+
+; Compilation Hierarchy Node       ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Full Hierarchy Name                                          ;
++----------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+--------------------------------------------------------------+
+; |the_cache                       ; 5 (2)       ; 3            ; 0           ; 37   ; 0            ; 2 (1)        ; 2 (0)             ; 1 (1)            ; 0 (0)           ; |the_cache                                                   ;
+;    |counter_quanternary:inst6|   ; 2 (2)       ; 2            ; 0           ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 0 (0)            ; 0 (0)           ; |the_cache|counter_quanternary:inst6                         ;
+;    |memory_unit_8blocks:inst|    ; 1 (0)       ; 0            ; 0           ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |the_cache|memory_unit_8blocks:inst                          ;
+;       |memory_unit_1block:inst1| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |the_cache|memory_unit_8blocks:inst|memory_unit_1block:inst1 ;
++----------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+--------------------------------------------------------------+
+
+
++--------------------------------+
+; Analysis & Synthesis Equations ;
++--------------------------------+
+The equations can be found in F:/ComputerOrganizationExperiment/Lesson4/TEST_ON_Memory_Unit_1Byte.map.eqn.
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                   ;
++----------------------------------+-----------------+---------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Name with Absolute Path                                        ;
++----------------------------------+-----------------+---------------------------------------------------------------------+
+; address_combiner.bdf             ; yes             ; F:/ComputerOrganizationExperiment/Lesson4/address_combiner.bdf      ;
+; counter_quanternary.bdf          ; yes             ; F:/ComputerOrganizationExperiment/Lesson4/counter_quanternary.bdf   ;
+; Memory_Unit_1Bit.bdf             ; yes             ; F:/ComputerOrganizationExperiment/Lesson4/Memory_Unit_1Bit.bdf      ;
+; memory_unit_1block.bdf           ; yes             ; F:/ComputerOrganizationExperiment/Lesson4/memory_unit_1block.bdf    ;
+; Memory_Unit_1Byte.bdf            ; yes             ; F:/ComputerOrganizationExperiment/Lesson4/Memory_Unit_1Byte.bdf     ;
+; memory_unit_8blocks.bdf          ; yes             ; F:/ComputerOrganizationExperiment/Lesson4/memory_unit_8blocks.bdf   ;
+; table_unit_4bit.bdf              ; yes             ; F:/ComputerOrganizationExperiment/Lesson4/table_unit_4bit.bdf       ;
+; table_unit_32bit.bdf             ; yes             ; F:/ComputerOrganizationExperiment/Lesson4/table_unit_32bit.bdf      ;
+; the_cache.bdf                    ; yes             ; F:/ComputerOrganizationExperiment/Lesson4/the_cache.bdf             ;
+; Memory_Unit_1Bit_dffe.bdf        ; yes             ; F:/ComputerOrganizationExperiment/Lesson4/Memory_Unit_1Bit_dffe.bdf ;
+; 74138.bdf                        ; yes             ; c:/altera/quartus42/libraries/others/maxplus2/74138.bdf             ;
++----------------------------------+-----------------+---------------------------------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                      ;
++---------------------------------+--------------------------------+
+; Resource                        ; Usage                          ;
++---------------------------------+--------------------------------+
+; Logic cells                     ; 5                              ;
+; Total combinational functions   ; 3                              ;
+; Total 4-input functions         ; 0                              ;
+; Total 3-input functions         ; 0                              ;
+; Total 2-input functions         ; 2                              ;
+; Total 1-input functions         ; 0                              ;
+; Total 0-input functions         ; 1                              ;
+; Combinational cells for routing ; 0                              ;
+; Total registers                 ; 3                              ;
+; I/O pins                        ; 37                             ;
+; Maximum fan-out node            ; counter_quanternary:inst6|inst ;
+; Maximum fan-out                 ; 3                              ;
+; Total fan-out                   ; 22                             ;
+; Average fan-out                 ; 0.52                           ;
++---------------------------------+--------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 4.2 Build 178 01/19/2005 Service Pack 1 SJ Full Version
+    Info: Processing started: Wed Apr 16 16:58:57 2014
+Info: Command: quartus_map --import_settings_files=on --export_settings_files=off TEST_ON_Memory_Unit_1Byte -c TEST_ON_Memory_Unit_1Byte
+Info: Found 1 design units, including 1 entities, in source file Memory_Unit_1Block(4Bytes).bdf
+    Info: Found entity 1: Memory_Unit_1Block(4Bytes)
+Info: Found 1 design units, including 1 entities, in source file address_combiner.bdf
+    Info: Found entity 1: address_combiner
+Info: Found 1 design units, including 1 entities, in source file counter_quanternary.bdf
+    Info: Found entity 1: counter_quanternary
+Info: Found 1 design units, including 1 entities, in source file Memory_Unit_1Bit.bdf
+    Info: Found entity 1: Memory_Unit_1Bit
+Info: Found 1 design units, including 1 entities, in source file memory_unit_1block.bdf
+    Info: Found entity 1: memory_unit_1block
+Info: Found 1 design units, including 1 entities, in source file Memory_Unit_1Byte.bdf
+    Info: Found entity 1: Memory_Unit_1Byte
+Info: Found 1 design units, including 1 entities, in source file memory_unit_8blocks.bdf
+    Info: Found entity 1: memory_unit_8blocks
+Info: Found 1 design units, including 1 entities, in source file table_unit_4bit.bdf
+    Info: Found entity 1: table_unit_4bit
+Info: Found 1 design units, including 1 entities, in source file table_unit_32bit.bdf
+    Info: Found entity 1: table_unit_32bit
+Info: Found 1 design units, including 1 entities, in source file the_cache.bdf
+    Info: Found entity 1: the_cache
+Info: Found 1 design units, including 1 entities, in source file Memory_Unit_1Bit_dffe.bdf
+    Info: Found entity 1: Memory_Unit_1Bit_dffe
+Warning: Block or symbol "Counter_quanternary" of instance "inst6" overlaps another block or symbol
+Warning: Block or symbol "Address_Combiner" of instance "inst7" overlaps another block or symbol
+Warning: Block or symbol "AND2" of instance "inst12" overlaps another block or symbol
+Warning: Block or symbol "Memory_Unit_1Bit_dffe" of instance "inst4" overlaps another block or symbol
+Info: Found 1 design units, including 1 entities, in source file c:/altera/quartus42/libraries/others/maxplus2/74138.bdf
+    Info: Found entity 1: 74138
+Warning: Found inconsistent dimensions
+Warning: Found inconsistent dimensions
+Warning: Converted TRI buffer or tri-state bus to logic, or removed OPNDRN
+    Warning: Converting tri-state bus "table_unit_32bit:inst5|DOUT[0]" that feeds logic into logic
+    Warning: Converting tri-state bus "table_unit_32bit:inst5|DOUT[1]" that feeds logic into logic
+    Warning: Converting tri-state bus "table_unit_32bit:inst5|DOUT[2]" that feeds logic into logic
+    Warning: Converting tri-state bus "table_unit_32bit:inst5|DOUT[3]" that feeds logic into logic
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst1|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst2|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst3|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst4|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst5|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst6|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst7|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst6|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst5|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst4|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst3|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst2|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst1|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst2|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst1|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: LATCH primitive "memory_unit_8blocks:inst|memory_unit_1block:inst|Memory_Unit_1Byte:inst|Memory_Unit_1Bit:inst7|inst" is permanently disabled
+Warning: TRI or OPNDRN buffers permanently disabled
+    Warning: Node "memory_unit_8blocks:inst|Q[0]~42"
+    Warning: Node "memory_unit_8blocks:inst|Q[1]~77"
+    Warning: Node "memory_unit_8blocks:inst|Q[2]~112"
+    Warning: Node "memory_unit_8blocks:inst|Q[3]~147"
+    Warning: Node "memory_unit_8blocks:inst|Q[4]~182"
+    Warning: Node "memory_unit_8blocks:inst|Q[5]~217"
+    Warning: Node "memory_unit_8blocks:inst|Q[6]~252"
+    Warning: Node "memory_unit_8blocks:inst|Q[7]~287"
+Warning: Output pins are stuck at VCC or GND
+    Warning: Pin "MR" stuck at GND
+Warning: Design contains 8 input pin(s) that do not drive logic
+    Warning: No output dependent on input pin "MD[0]"
+    Warning: No output dependent on input pin "MD[1]"
+    Warning: No output dependent on input pin "MD[2]"
+    Warning: No output dependent on input pin "MD[3]"
+    Warning: No output dependent on input pin "MD[4]"
+    Warning: No output dependent on input pin "MD[5]"
+    Warning: No output dependent on input pin "MD[6]"
+    Warning: No output dependent on input pin "MD[7]"
+Info: Implemented 42 device resources after synthesis - the final resource count might be different
+    Info: Implemented 19 input pins
+    Info: Implemented 18 output pins
+    Info: Implemented 5 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 223 warnings
+    Info: Processing ended: Wed Apr 16 16:58:59 2014
+    Info: Elapsed time: 00:00:02
+
+

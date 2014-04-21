@@ -1,0 +1,338 @@
+Analysis & Synthesis report for Memory_Unit_1Block
+Wed Apr 09 16:40:48 2014
+Version 4.2 Build 178 01/19/2005 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Hierarchy
+  5. User-Specified and Inferred Latches
+  6. General Register Statistics
+  7. WYSIWYG Cells
+  8. Analysis & Synthesis Resource Utilization by Entity
+  9. Analysis & Synthesis Equations
+ 10. Analysis & Synthesis Source Files Read
+ 11. Analysis & Synthesis Resource Usage Summary
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+support information,  device programming or simulation file,  and any other
+associated  documentation or information  provided by  Altera  or a partner
+under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+other  use  of such  megafunction  design,  netlist,  support  information,
+device programming or simulation file,  or any other  related documentation
+or information  is prohibited  for  any  other purpose,  including, but not
+limited to  modification,  reverse engineering,  de-compiling, or use  with
+any other  silicon devices,  unless such use is  explicitly  licensed under
+a separate agreement with  Altera  or a megafunction partner.  Title to the
+intellectual property,  including patents,  copyrights,  trademarks,  trade
+secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+support  information,  device programming or simulation file,  or any other
+related documentation or information provided by  Altera  or a megafunction
+partner, remains with Altera, the megafunction partner, or their respective
+licensors. No other licenses, including any licenses needed under any third
+party's intellectual property, are provided herein.
+
+
+
++-----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                ;
++-----------------------------+-----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Wed Apr 09 16:40:48 2014         ;
+; Quartus II Version          ; 4.2 Build 178 01/19/2005 SP 1 SJ Full Version ;
+; Revision Name               ; Memory_Unit_1Block                            ;
+; Top-level Entity Name       ; memory_unit_1block                            ;
+; Family                      ; Cyclone                                       ;
+; Total logic elements        ; 63                                            ;
+; Total pins                  ; 20                                            ;
+; Total virtual pins          ; 0                                             ;
+; Total memory bits           ; 0                                             ;
+; Total PLLs                  ; 0                                             ;
++-----------------------------+-----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                ;
++--------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                             ; Setting            ; Default Value      ;
++--------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                             ; EP1C6Q240C8        ;                    ;
+; Family name                                                        ; Cyclone            ; Stratix            ;
+; Use smart compilation                                              ; Normal             ; Normal             ;
+; Restructure Multiplexers                                           ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                ; off                ; off                ;
+; Preserve fewer node names                                          ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                          ; Off                ; Off                ;
+; Verilog Version                                                    ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                       ; VHDL93             ; VHDL93             ;
+; Top-level entity name                                              ; Memory_Unit_1Block ; Memory_Unit_1Block ;
+; State Machine Processing                                           ; Auto               ; Auto               ;
+; Extract Verilog State Machines                                     ; On                 ; On                 ;
+; Extract VHDL State Machines                                        ; On                 ; On                 ;
+; NOT Gate Push-Back                                                 ; On                 ; On                 ;
+; Power-Up Don't Care                                                ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                       ; Off                ; Off                ;
+; Remove Duplicate Registers                                         ; On                 ; On                 ;
+; Ignore CARRY Buffers                                               ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                             ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                              ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore LCELL Buffers                                               ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                     ; Off                ; Off                ;
+; Optimization Technique -- Cyclone                                  ; Balanced           ; Balanced           ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II ; 70                 ; 70                 ;
+; Auto Carry Chains                                                  ; On                 ; On                 ;
+; Auto Open-Drain Pins                                               ; On                 ; On                 ;
+; Remove Duplicate Logic                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                              ; Off                ; Off                ;
+; Perform gate-level register retiming                               ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax             ; On                 ; On                 ;
+; Auto ROM Replacement                                               ; On                 ; On                 ;
+; Auto RAM Replacement                                               ; On                 ; On                 ;
+; Auto Shift Register Replacement                                    ; On                 ; On                 ;
+; Auto Clock Enable Replacement                                      ; On                 ; On                 ;
+; Allows Synchronous Control Signal Usage in Normal Mode Logic Cells ; On                 ; On                 ;
+; Auto RAM Block Balancing                                           ; On                 ; On                 ;
+; Auto Resource Sharing                                              ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                 ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                 ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                      ; Off                ; Off                ;
+; Enable M512 Memory Blocks                                          ; On                 ; On                 ;
++--------------------------------------------------------------------+--------------------+--------------------+
+
+
++-----------+
+; Hierarchy ;
++-----------+
+memory_unit_1block
+ |-- memory_unit_1byte:inst
+      |-- memory_unit_1bit:inst
+      |-- memory_unit_1bit:inst1
+      |-- memory_unit_1bit:inst2
+      |-- memory_unit_1bit:inst3
+      |-- memory_unit_1bit:inst4
+      |-- memory_unit_1bit:inst5
+      |-- memory_unit_1bit:inst6
+      |-- memory_unit_1bit:inst7
+ |-- memory_unit_1byte:inst1
+      |-- memory_unit_1bit:inst
+      |-- memory_unit_1bit:inst1
+      |-- memory_unit_1bit:inst2
+      |-- memory_unit_1bit:inst3
+      |-- memory_unit_1bit:inst4
+      |-- memory_unit_1bit:inst5
+      |-- memory_unit_1bit:inst6
+      |-- memory_unit_1bit:inst7
+ |-- memory_unit_1byte:inst2
+      |-- memory_unit_1bit:inst
+      |-- memory_unit_1bit:inst1
+      |-- memory_unit_1bit:inst2
+      |-- memory_unit_1bit:inst3
+      |-- memory_unit_1bit:inst4
+      |-- memory_unit_1bit:inst5
+      |-- memory_unit_1bit:inst6
+      |-- memory_unit_1bit:inst7
+ |-- memory_unit_1byte:inst3
+      |-- memory_unit_1bit:inst
+      |-- memory_unit_1bit:inst1
+      |-- memory_unit_1bit:inst2
+      |-- memory_unit_1bit:inst3
+      |-- memory_unit_1bit:inst4
+      |-- memory_unit_1bit:inst5
+      |-- memory_unit_1bit:inst6
+      |-- memory_unit_1bit:inst7
+
+
++----------------------------------------------------------+
+; User-Specified and Inferred Latches                      ;
++-----------------------------------------------------+----+
+; Latch Name                                          ;    ;
++-----------------------------------------------------+----+
+; memory_unit_1byte:inst3|memory_unit_1bit:inst|inst  ;    ;
+; memory_unit_1byte:inst2|memory_unit_1bit:inst|inst  ;    ;
+; memory_unit_1byte:inst1|memory_unit_1bit:inst|inst  ;    ;
+; memory_unit_1byte:inst|memory_unit_1bit:inst|inst   ;    ;
+; memory_unit_1byte:inst3|memory_unit_1bit:inst1|inst ;    ;
+; memory_unit_1byte:inst2|memory_unit_1bit:inst1|inst ;    ;
+; memory_unit_1byte:inst1|memory_unit_1bit:inst1|inst ;    ;
+; memory_unit_1byte:inst|memory_unit_1bit:inst1|inst  ;    ;
+; memory_unit_1byte:inst3|memory_unit_1bit:inst2|inst ;    ;
+; memory_unit_1byte:inst2|memory_unit_1bit:inst2|inst ;    ;
+; memory_unit_1byte:inst1|memory_unit_1bit:inst2|inst ;    ;
+; memory_unit_1byte:inst|memory_unit_1bit:inst2|inst  ;    ;
+; memory_unit_1byte:inst3|memory_unit_1bit:inst3|inst ;    ;
+; memory_unit_1byte:inst2|memory_unit_1bit:inst3|inst ;    ;
+; memory_unit_1byte:inst1|memory_unit_1bit:inst3|inst ;    ;
+; memory_unit_1byte:inst|memory_unit_1bit:inst3|inst  ;    ;
+; memory_unit_1byte:inst3|memory_unit_1bit:inst4|inst ;    ;
+; memory_unit_1byte:inst2|memory_unit_1bit:inst4|inst ;    ;
+; memory_unit_1byte:inst1|memory_unit_1bit:inst4|inst ;    ;
+; memory_unit_1byte:inst|memory_unit_1bit:inst4|inst  ;    ;
+; memory_unit_1byte:inst3|memory_unit_1bit:inst5|inst ;    ;
+; memory_unit_1byte:inst2|memory_unit_1bit:inst5|inst ;    ;
+; memory_unit_1byte:inst1|memory_unit_1bit:inst5|inst ;    ;
+; memory_unit_1byte:inst|memory_unit_1bit:inst5|inst  ;    ;
+; memory_unit_1byte:inst3|memory_unit_1bit:inst6|inst ;    ;
+; memory_unit_1byte:inst2|memory_unit_1bit:inst6|inst ;    ;
+; memory_unit_1byte:inst1|memory_unit_1bit:inst6|inst ;    ;
+; memory_unit_1byte:inst|memory_unit_1bit:inst6|inst  ;    ;
+; memory_unit_1byte:inst3|memory_unit_1bit:inst7|inst ;    ;
+; memory_unit_1byte:inst2|memory_unit_1bit:inst7|inst ;    ;
+; memory_unit_1byte:inst1|memory_unit_1bit:inst7|inst ;    ;
+; memory_unit_1byte:inst|memory_unit_1bit:inst7|inst  ;    ;
+; Number of user-specified and inferred latches       ; 32 ;
++-----------------------------------------------------+----+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Output Enable      ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------+
+; WYSIWYG Cells                                                  ;
++--------------------------------------------------------+-------+
+; Statistic                                              ; Value ;
++--------------------------------------------------------+-------+
+; Number of WYSIWYG cells                                ; 0     ;
+; Number of synthesis-generated cells                    ; 63    ;
+; Number of WYSIWYG LUTs                                 ; 0     ;
+; Number of synthesis-generated LUTs                     ; 63    ;
+; Number of WYSIWYG registers                            ; 0     ;
+; Number of synthesis-generated registers                ; 0     ;
+; Number of cells with combinational logic only          ; 63    ;
+; Number of cells with registers only                    ; 0     ;
+; Number of cells with combinational logic and registers ; 0     ;
++--------------------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                          ;
++--------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+--------------------------------------------------------------------+
+; Compilation Hierarchy Node     ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Full Hierarchy Name                                                ;
++--------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+--------------------------------------------------------------------+
+; |memory_unit_1block            ; 63 (31)     ; 0            ; 0           ; 20   ; 0            ; 63 (31)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block                                                ;
+;    |memory_unit_1byte:inst1|   ; 8 (0)       ; 0            ; 0           ; 0    ; 0            ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst1                        ;
+;       |memory_unit_1bit:inst1| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst1|memory_unit_1bit:inst1 ;
+;       |memory_unit_1bit:inst2| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst1|memory_unit_1bit:inst2 ;
+;       |memory_unit_1bit:inst3| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst1|memory_unit_1bit:inst3 ;
+;       |memory_unit_1bit:inst4| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst1|memory_unit_1bit:inst4 ;
+;       |memory_unit_1bit:inst5| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst1|memory_unit_1bit:inst5 ;
+;       |memory_unit_1bit:inst6| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst1|memory_unit_1bit:inst6 ;
+;       |memory_unit_1bit:inst7| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst1|memory_unit_1bit:inst7 ;
+;       |memory_unit_1bit:inst|  ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst1|memory_unit_1bit:inst  ;
+;    |memory_unit_1byte:inst2|   ; 8 (0)       ; 0            ; 0           ; 0    ; 0            ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst2                        ;
+;       |memory_unit_1bit:inst1| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst2|memory_unit_1bit:inst1 ;
+;       |memory_unit_1bit:inst2| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst2|memory_unit_1bit:inst2 ;
+;       |memory_unit_1bit:inst3| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst2|memory_unit_1bit:inst3 ;
+;       |memory_unit_1bit:inst4| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst2|memory_unit_1bit:inst4 ;
+;       |memory_unit_1bit:inst5| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst2|memory_unit_1bit:inst5 ;
+;       |memory_unit_1bit:inst6| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst2|memory_unit_1bit:inst6 ;
+;       |memory_unit_1bit:inst7| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst2|memory_unit_1bit:inst7 ;
+;       |memory_unit_1bit:inst|  ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst2|memory_unit_1bit:inst  ;
+;    |memory_unit_1byte:inst3|   ; 8 (0)       ; 0            ; 0           ; 0    ; 0            ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst3                        ;
+;       |memory_unit_1bit:inst1| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst3|memory_unit_1bit:inst1 ;
+;       |memory_unit_1bit:inst2| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst3|memory_unit_1bit:inst2 ;
+;       |memory_unit_1bit:inst3| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst3|memory_unit_1bit:inst3 ;
+;       |memory_unit_1bit:inst4| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst3|memory_unit_1bit:inst4 ;
+;       |memory_unit_1bit:inst5| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst3|memory_unit_1bit:inst5 ;
+;       |memory_unit_1bit:inst6| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst3|memory_unit_1bit:inst6 ;
+;       |memory_unit_1bit:inst7| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst3|memory_unit_1bit:inst7 ;
+;       |memory_unit_1bit:inst|  ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst3|memory_unit_1bit:inst  ;
+;    |memory_unit_1byte:inst|    ; 8 (0)       ; 0            ; 0           ; 0    ; 0            ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst                         ;
+;       |memory_unit_1bit:inst1| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst|memory_unit_1bit:inst1  ;
+;       |memory_unit_1bit:inst2| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst|memory_unit_1bit:inst2  ;
+;       |memory_unit_1bit:inst3| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst|memory_unit_1bit:inst3  ;
+;       |memory_unit_1bit:inst4| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst|memory_unit_1bit:inst4  ;
+;       |memory_unit_1bit:inst5| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst|memory_unit_1bit:inst5  ;
+;       |memory_unit_1bit:inst6| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst|memory_unit_1bit:inst6  ;
+;       |memory_unit_1bit:inst7| ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst|memory_unit_1bit:inst7  ;
+;       |memory_unit_1bit:inst|  ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |memory_unit_1block|memory_unit_1byte:inst|memory_unit_1bit:inst   ;
++--------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+--------------------------------------------------------------------+
+
+
++--------------------------------+
+; Analysis & Synthesis Equations ;
++--------------------------------+
+The equations can be found in F:/机组实验/Lesson4/block/Memory_Unit_1Block.map.eqn.
+
+
++-------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                          ;
++----------------------------------+-----------------+--------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Name with Absolute Path               ;
++----------------------------------+-----------------+--------------------------------------------+
+; ../memory_unit_1byte.bdf         ; yes             ; F:/机组实验/Lesson4/memory_unit_1byte.bdf  ;
+; ../memory_unit_1bit.bdf          ; yes             ; F:/机组实验/Lesson4/memory_unit_1bit.bdf   ;
+; ../memory_unit_1block.bdf        ; yes             ; F:/机组实验/Lesson4/memory_unit_1block.bdf ;
++----------------------------------+-----------------+--------------------------------------------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++---------------------------------+-----------+
+; Resource                        ; Usage     ;
++---------------------------------+-----------+
+; Logic cells                     ; 63        ;
+; Total combinational functions   ; 63        ;
+; Total 4-input functions         ; 56        ;
+; Total 3-input functions         ; 3         ;
+; Total 2-input functions         ; 4         ;
+; Total 1-input functions         ; 0         ;
+; Total 0-input functions         ; 0         ;
+; Combinational cells for routing ; 0         ;
+; Total registers                 ; 0         ;
+; I/O pins                        ; 20        ;
+; Maximum fan-out node            ; WR        ;
+; Maximum fan-out                 ; 32        ;
+; Total fan-out                   ; 257       ;
+; Average fan-out                 ; 3.10      ;
++---------------------------------+-----------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 4.2 Build 178 01/19/2005 Service Pack 1 SJ Full Version
+    Info: Processing started: Wed Apr 09 16:40:46 2014
+Info: Command: quartus_map --import_settings_files=on --export_settings_files=off Memory_Unit_1Block -c Memory_Unit_1Block
+Info: Found 1 design units, including 1 entities, in source file ../memory_unit_1byte.bdf
+    Info: Found entity 1: memory_unit_1byte
+Info: Found 1 design units, including 1 entities, in source file ../memory_unit_1bit.bdf
+    Info: Found entity 1: memory_unit_1bit
+Info: Found 1 design units, including 1 entities, in source file ../memory_unit_1block.bdf
+    Info: Found entity 1: memory_unit_1block
+Info: Implemented 83 device resources after synthesis - the final resource count might be different
+    Info: Implemented 12 input pins
+    Info: Implemented 8 output pins
+    Info: Implemented 63 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Processing ended: Wed Apr 09 16:40:48 2014
+    Info: Elapsed time: 00:00:02
+
+

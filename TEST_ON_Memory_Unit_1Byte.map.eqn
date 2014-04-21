@@ -1,0 +1,263 @@
+--D1_inst is counter_quanternary:inst6|inst
+--operation mode is normal
+
+D1_inst_lut_out = !D1_inst;
+D1_inst = DFFEAS(D1_inst_lut_out, T2, !inst10, , , , , , );
+
+
+--D1_inst5 is counter_quanternary:inst6|inst5
+--operation mode is normal
+
+D1_inst5_lut_out = !D1_inst5;
+D1_inst5 = DFFEAS(D1_inst5_lut_out, !D1_inst, !inst10, , , , , , );
+
+
+--F2L1 is memory_unit_8blocks:inst|memory_unit_1block:inst1|inst19~4
+--operation mode is normal
+
+F2L1 = D1_inst & D1_inst5;
+
+
+--inst16 is inst16
+--operation mode is normal
+
+inst16_lut_out = VCC;
+inst16 = DFFEAS(inst16_lut_out, T2, CLR, , !RD, , , , );
+
+
+--inst10 is inst10
+--operation mode is normal
+
+inst10 = !CLR # !inst16;
+
+
+--MD[0] is MD[0]
+--operation mode is input
+
+MD[0] = INPUT();
+
+
+--MD[1] is MD[1]
+--operation mode is input
+
+MD[1] = INPUT();
+
+
+--MD[2] is MD[2]
+--operation mode is input
+
+MD[2] = INPUT();
+
+
+--MD[3] is MD[3]
+--operation mode is input
+
+MD[3] = INPUT();
+
+
+--MD[4] is MD[4]
+--operation mode is input
+
+MD[4] = INPUT();
+
+
+--MD[5] is MD[5]
+--operation mode is input
+
+MD[5] = INPUT();
+
+
+--MD[6] is MD[6]
+--operation mode is input
+
+MD[6] = INPUT();
+
+
+--MD[7] is MD[7]
+--operation mode is input
+
+MD[7] = INPUT();
+
+
+--A[0] is A[0]
+--operation mode is input
+
+A[0] = INPUT();
+
+
+--A[1] is A[1]
+--operation mode is input
+
+A[1] = INPUT();
+
+
+--A[2] is A[2]
+--operation mode is input
+
+A[2] = INPUT();
+
+
+--A[3] is A[3]
+--operation mode is input
+
+A[3] = INPUT();
+
+
+--A[4] is A[4]
+--operation mode is input
+
+A[4] = INPUT();
+
+
+--A[5] is A[5]
+--operation mode is input
+
+A[5] = INPUT();
+
+
+--A[6] is A[6]
+--operation mode is input
+
+A[6] = INPUT();
+
+
+--A[7] is A[7]
+--operation mode is input
+
+A[7] = INPUT();
+
+
+--T2 is T2
+--operation mode is input
+
+T2 = INPUT();
+
+
+--CLR is CLR
+--operation mode is input
+
+CLR = INPUT();
+
+
+--RD is RD
+--operation mode is input
+
+RD = INPUT();
+
+
+--MR is MR
+--operation mode is output
+
+MR = OUTPUT(GND);
+
+
+--TEST_OUT is TEST_OUT
+--operation mode is output
+
+TEST_OUT = OUTPUT(!F2L1);
+
+
+--D[0] is D[0]
+--operation mode is output
+
+D[0]_tri_out = TRI(VCC, GND);
+D[0] = OUTPUT(D[0]_tri_out);
+
+
+--D[1] is D[1]
+--operation mode is output
+
+D[1]_tri_out = TRI(VCC, GND);
+D[1] = OUTPUT(D[1]_tri_out);
+
+
+--D[2] is D[2]
+--operation mode is output
+
+D[2]_tri_out = TRI(VCC, GND);
+D[2] = OUTPUT(D[2]_tri_out);
+
+
+--D[3] is D[3]
+--operation mode is output
+
+D[3]_tri_out = TRI(VCC, GND);
+D[3] = OUTPUT(D[3]_tri_out);
+
+
+--D[4] is D[4]
+--operation mode is output
+
+D[4]_tri_out = TRI(VCC, GND);
+D[4] = OUTPUT(D[4]_tri_out);
+
+
+--D[5] is D[5]
+--operation mode is output
+
+D[5]_tri_out = TRI(VCC, GND);
+D[5] = OUTPUT(D[5]_tri_out);
+
+
+--D[6] is D[6]
+--operation mode is output
+
+D[6]_tri_out = TRI(VCC, GND);
+D[6] = OUTPUT(D[6]_tri_out);
+
+
+--D[7] is D[7]
+--operation mode is output
+
+D[7]_tri_out = TRI(VCC, GND);
+D[7] = OUTPUT(D[7]_tri_out);
+
+
+--MA[0] is MA[0]
+--operation mode is output
+
+MA[0] = OUTPUT(A[0]);
+
+
+--MA[1] is MA[1]
+--operation mode is output
+
+MA[1] = OUTPUT(A[1]);
+
+
+--MA[2] is MA[2]
+--operation mode is output
+
+MA[2] = OUTPUT(A[2]);
+
+
+--MA[3] is MA[3]
+--operation mode is output
+
+MA[3] = OUTPUT(A[3]);
+
+
+--MA[4] is MA[4]
+--operation mode is output
+
+MA[4] = OUTPUT(A[4]);
+
+
+--MA[5] is MA[5]
+--operation mode is output
+
+MA[5] = OUTPUT(A[5]);
+
+
+--MA[6] is MA[6]
+--operation mode is output
+
+MA[6] = OUTPUT(A[6]);
+
+
+--MA[7] is MA[7]
+--operation mode is output
+
+MA[7] = OUTPUT(A[7]);
+
+

@@ -1,0 +1,81 @@
+# Copyright (C) 1991-2005 Altera Corporation
+# Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+# support information,  device programming or simulation file,  and any other
+# associated  documentation or information  provided by  Altera  or a partner
+# under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+# to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+# other  use  of such  megafunction  design,  netlist,  support  information,
+# device programming or simulation file,  or any other  related documentation
+# or information  is prohibited  for  any  other purpose,  including, but not
+# limited to  modification,  reverse engineering,  de-compiling, or use  with
+# any other  silicon devices,  unless such use is  explicitly  licensed under
+# a separate agreement with  Altera  or a megafunction partner.  Title to the
+# intellectual property,  including patents,  copyrights,  trademarks,  trade
+# secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+# support  information,  device programming or simulation file,  or any other
+# related documentation or information provided by  Altera  or a megafunction
+# partner, remains with Altera, the megafunction partner, or their respective
+# licensors. No other licenses, including any licenses needed under any third
+# party's intellectual property, are provided herein.
+
+
+# The default values for assignments are stored in the file
+#		Memory_Unit_1Block_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "4.2 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:56:53  APRIL 09, 2014"
+set_global_assignment -name LAST_QUARTUS_VERSION "4.2 SP1"
+set_global_assignment -name BDF_FILE ../memory_unit_1byte.bdf
+set_global_assignment -name BDF_FILE ../memory_unit_1bit.bdf
+set_global_assignment -name BDF_FILE ../memory_unit_1block.bdf
+set_global_assignment -name BDF_FILE ../Memory_Unit_8Blocks.bdf
+
+# Pin & Location Assignments
+# ==========================
+set_location_assignment PIN_74 -to DATA_IN[0]
+set_location_assignment PIN_82 -to DATA_OUT[0]
+set_location_assignment PIN_94 -to RD
+set_location_assignment PIN_95 -to WR
+set_location_assignment PIN_96 -to W[0]
+set_location_assignment PIN_97 -to W[1]
+set_location_assignment PIN_75 -to DATA_IN[1]
+set_location_assignment PIN_76 -to DATA_IN[2]
+set_location_assignment PIN_77 -to DATA_IN[3]
+set_location_assignment PIN_78 -to DATA_IN[4]
+set_location_assignment PIN_79 -to DATA_IN[5]
+set_location_assignment PIN_80 -to DATA_IN[6]
+set_location_assignment PIN_81 -to DATA_IN[7]
+set_location_assignment PIN_83 -to DATA_OUT[1]
+set_location_assignment PIN_84 -to DATA_OUT[2]
+set_location_assignment PIN_85 -to DATA_OUT[3]
+set_location_assignment PIN_86 -to DATA_OUT[4]
+set_location_assignment PIN_87 -to DATA_OUT[5]
+set_location_assignment PIN_88 -to DATA_OUT[6]
+set_location_assignment PIN_93 -to DATA_OUT[7]
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name TOP_LEVEL_ENTITY Memory_Unit_1Block
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE EP1C6Q240C8
+set_instance_assignment -name IO_STANDARD LVTTL -to WR
+set_instance_assignment -name IO_STANDARD LVTTL -to W[1]
+set_instance_assignment -name IO_STANDARD LVTTL -to DATA_IN[1]
+set_instance_assignment -name IO_STANDARD LVTTL -to DATA_OUT[2]
+set_instance_assignment -name IO_STANDARD LVTTL -to DATA_OUT[3]
+set_instance_assignment -name IO_STANDARD LVTTL -to DATA_OUT[4]
+set_instance_assignment -name IO_STANDARD LVTTL -to DATA_OUT[5]
+set_instance_assignment -name IO_STANDARD LVTTL -to DATA_OUT[6]
+set_instance_assignment -name IO_STANDARD LVTTL -to DATA_OUT[7]
